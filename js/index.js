@@ -55,7 +55,7 @@ $(function () {
           scrollTrigger: {
             trigger: ".about",
             start: "top 70%",
-            end: "top 70%",
+            end: "60% 70%",
             scrub: 2,
             markers: true,
           },
@@ -63,19 +63,39 @@ $(function () {
         .fromTo(
           ".about .about_inner .page .Title",
           { x: -500 },
-          { x: 0, duration: 5 },
+          { x: 0, duration: 10 },
           0
         )
         .fromTo(
           ".about .about_inner .page .menu_bar",
           { x: 500 },
-          { x: 0, duration: 5 },
+          { x: 0, duration: 10 },
           0
         )
         .fromTo(
-          ".about .about_inner .line",
+          ".about .about_inner .line01",
           { x: 2000 },
-          { x: 0, duration: 5 }
+          { x: 0, duration: 10 }
+        )
+        .fromTo(
+          ".about .about_inner .con .left",
+          { y: 2000 },
+          { y: 0, duration: 10 }
+        )
+        .fromTo(
+          ".about .about_inner .con .center",
+          { y: 2000 },
+          { y: 0, duration: 10 }
+        )
+        .fromTo(
+          ".about .about_inner .con .right",
+          { y: 2000 },
+          { y: 0, duration: 10 }
+        )
+        .fromTo(
+          ".about .about_inner .line02",
+          { x: -2000 },
+          { x: 0, duration: 10 }
         );
     },
 
@@ -124,6 +144,55 @@ $(function () {
         { y: 0, duration: 1 },
         1
       );
+
+      /*about*/
+      gsap
+        .timeline({
+          scrollTrigger: {
+            trigger: ".about",
+            start: "top 70%",
+            end: "60% 70%",
+            scrub: 2,
+            markers: true,
+          },
+        })
+        .fromTo(
+          ".about .about_inner .page .Title",
+          { x: -500 },
+          { x: 0, duration: 10 },
+          0
+        )
+        .fromTo(
+          ".about .about_inner .page .menu_bar",
+          { x: 500 },
+          { x: 0, duration: 10 },
+          0
+        )
+        .fromTo(
+          ".about .about_inner .line01",
+          { x: 2000 },
+          { x: 0, duration: 10 }
+        )
+        .fromTo(
+          ".about .about_inner .con .left",
+          { y: 2000 },
+          { y: 0, duration: 10 }
+        )
+        .fromTo(
+          ".about .about_inner .con .center",
+          { y: 2000 },
+          { y: 0, duration: 10 }
+        )
+        .fromTo(
+          ".about .about_inner .con .right",
+          { y: 2000 },
+          { y: 0, duration: 10 }
+        )
+        .fromTo(
+          ".about .about_inner .line02",
+          { x: -2000 },
+          { x: 0, duration: 10 }
+        );
     },
 
     "(max-width:599px)": function () {
@@ -171,6 +240,55 @@ $(function () {
         { y: -100, duration: 1 },
         1
       );
+
+      /*about*/
+      gsap
+        .timeline({
+          scrollTrigger: {
+            trigger: ".about",
+            start: "top 70%",
+            end: "60% 70%",
+            scrub: 2,
+            markers: true,
+          },
+        })
+        .fromTo(
+          ".about .about_inner .page .Title",
+          { x: -500 },
+          { x: 0, duration: 10 },
+          0
+        )
+        .fromTo(
+          ".about .about_inner .page .menu_bar",
+          { x: 500 },
+          { x: 0, duration: 10 },
+          0
+        )
+        .fromTo(
+          ".about .about_inner .line01",
+          { x: 2000 },
+          { x: 0, duration: 10 }
+        )
+        .fromTo(
+          ".about .about_inner .con .left",
+          { y: 2000 },
+          { y: -300, duration: 10 }
+        )
+        .fromTo(
+          ".about .about_inner .con .center",
+          { y: 2000 },
+          { y: -380, duration: 10 }
+        )
+        .fromTo(
+          ".about .about_inner .con .right",
+          { y: 2000 },
+          { y: -460, duration: 10 }
+        )
+        .fromTo(
+          ".about .about_inner .line02",
+          { x: -2000 },
+          { x: 0, duration: 10 }
+        );
     },
   });
 });
