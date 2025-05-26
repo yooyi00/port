@@ -272,17 +272,17 @@ $(function () {
         .fromTo(
           ".about .about_inner .con .left",
           { y: 2000 },
-          { y: -300, duration: 10 }
+          { y: 0, duration: 10 }
         )
         .fromTo(
           ".about .about_inner .con .center",
           { y: 2000 },
-          { y: -380, duration: 10 }
+          { y: 0, duration: 10 }
         )
         .fromTo(
           ".about .about_inner .con .right",
           { y: 2000 },
-          { y: -460, duration: 10 }
+          { y: 0, duration: 10 }
         )
         .fromTo(
           ".about .about_inner .line02",

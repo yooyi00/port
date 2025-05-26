@@ -452,31 +452,34 @@ body {
   /*con*/
   .about .about_inner .con {
     width: 100%;
-    height: 100%;
-    margin: 0px auto;
+    margin: 20px auto;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
+    gap: 10px;
     align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     box-sizing: border-box;
   }
 
   .about .about_inner .con > div {
-    width: calc(100% / 3);
-    height: 100%;
+    width: 80%;
   }
 
   .about .about_inner .con h3 {
-    font-size: 3.2vw;
+    font-size: 4vw;
     margin-bottom: 1vw;
   }
 
   .about .about_inner .con p {
-    font-size: 1.7vw;
+    font-size: 3vw;
     line-height: 1.5;
   }
 
-  /*con에 lefet*/
+  /*con에 left*/
   .about .about_inner .con .left .left_up {
     margin-bottom: 1vw;
     border-bottom: 1px solid #fff;
@@ -488,7 +491,7 @@ body {
 
   .about .about_inner .con .left .left_down p:nth-child(odd) {
     margin-bottom: 0.5vw;
-    font-size: 1.5vw;
+    font-size: 2.5vw;
   }
 
   /*line03*/
@@ -499,7 +502,7 @@ body {
   /*con에 center*/
   .about .about_inner .con .center p:nth-child(odd) {
     margin-bottom: 0.5vw;
-    font-size: 1.5vw;
+    font-size: 2.5vw;
   }
 
   .about .about_inner .con .center p:nth-child(3) {
@@ -532,7 +535,7 @@ body {
   }
 
   .about .about_inner .con .right ul li {
-    width: calc(100% / 4 - 1vw);
+    width: calc(100% / 7 - 1vw);
   }
 
   .about .about_inner .con .right ul li img {
@@ -542,11 +545,11 @@ body {
 
   /*click*/
   .about .about_inner .click {
-    width: 4vw;
-    height: 4vw;
-    position: relative;
-    top: -2vw;
-    left: 4vw;
+    width: 6vw;
+    height: 6vw;
+    position: absolute;
+    bottom: -1vw;
+    right: -1vw;
     animation: scale 1s linear infinite;
   }
 
@@ -570,7 +573,7 @@ body {
     width: 100%;
     border-bottom: 1px solid #fff;
     position: relative;
-    bottom: -55vw;
+    bottom: -520px;
     z-index: 1;
   }
 
