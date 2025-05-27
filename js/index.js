@@ -13,7 +13,7 @@ $(function () {
 
       gsap.fromTo(
         ".intro .intro_inner .right .textBox",
-        { x: 2000 },
+        { x: 2000, y: -200 },
         { x: 0, y: -200, duration: 1 }
       );
 
@@ -57,7 +57,7 @@ $(function () {
             start: "top 70%",
             end: "60% 70%",
             scrub: 2,
-            markers: true,
+            //markers: true,
           },
         })
         .fromTo(
@@ -73,11 +73,6 @@ $(function () {
           0
         )
         .fromTo(
-          ".about .about_inner .line01",
-          { x: 2000 },
-          { x: 0, duration: 10 }
-        )
-        .fromTo(
           ".about .about_inner .con .left",
           { y: 2000 },
           { y: 0, duration: 10 }
@@ -91,12 +86,19 @@ $(function () {
           ".about .about_inner .con .right",
           { y: 2000 },
           { y: 0, duration: 10 }
-        )
-        .fromTo(
-          ".about .about_inner .line02",
-          { x: -2000 },
-          { x: 0, duration: 10 }
         );
+
+      gsap.utils.toArray(".project").forEach((project) => {
+        gsap.timeline({
+          scrollTrigger: {
+            trigger: project,
+            start: "top top",
+            pin: true,
+            pinSpacing: false,
+            markers: true,
+          },
+        });
+      });
     },
 
     "(max-width:1219px)": function () {
@@ -109,7 +111,7 @@ $(function () {
 
       gsap.fromTo(
         ".intro .intro_inner .right .textBox",
-        { x: 2000 },
+        { x: 2000, y: -100 },
         { x: 0, y: -100, duration: 1 }
       );
 
@@ -153,7 +155,7 @@ $(function () {
             start: "top 70%",
             end: "60% 70%",
             scrub: 2,
-            markers: true,
+            //markers: true,
           },
         })
         .fromTo(
@@ -169,11 +171,6 @@ $(function () {
           0
         )
         .fromTo(
-          ".about .about_inner .line01",
-          { x: 2000 },
-          { x: 0, duration: 10 }
-        )
-        .fromTo(
           ".about .about_inner .con .left",
           { y: 2000 },
           { y: 0, duration: 10 }
@@ -187,11 +184,6 @@ $(function () {
           ".about .about_inner .con .right",
           { y: 2000 },
           { y: 0, duration: 10 }
-        )
-        .fromTo(
-          ".about .about_inner .line02",
-          { x: -2000 },
-          { x: 0, duration: 10 }
         );
     },
 
@@ -249,7 +241,7 @@ $(function () {
             start: "top 70%",
             end: "60% 70%",
             scrub: 2,
-            markers: true,
+            //markers: true,
           },
         })
         .fromTo(
@@ -265,11 +257,6 @@ $(function () {
           0
         )
         .fromTo(
-          ".about .about_inner .line01",
-          { x: 2000 },
-          { x: 0, duration: 10 }
-        )
-        .fromTo(
           ".about .about_inner .con .left",
           { y: 2000 },
           { y: 0, duration: 10 }
@@ -283,11 +270,6 @@ $(function () {
           ".about .about_inner .con .right",
           { y: 2000 },
           { y: 0, duration: 10 }
-        )
-        .fromTo(
-          ".about .about_inner .line02",
-          { x: -2000 },
-          { x: 0, duration: 10 }
         );
     },
   });

@@ -96,8 +96,8 @@ body {
 
   /*picture*/
   .intro .intro_inner .left .picture {
-    width: 70%;
-    height: 85%;
+    width: 55%;
+    height: 90%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -110,15 +110,15 @@ body {
 
   /*tape*/
   .intro .intro_inner .left .picture .tape01 {
-    width: 20%;
+    width: 15%;
     height: 15%;
     position: absolute;
-    top: -35px;
+    top: -30px;
   }
 
   /*svg*/
   #Layer_1 {
-    padding-top: 3vw;
+    padding-top: 25px;
     margin: 0 1vw;
     box-sizing: border-box;
   }
@@ -148,7 +148,7 @@ body {
 
   /*profile*/
   .intro .intro_inner .left .picture .profile {
-    width: 80%;
+    width: 70%;
     height: 70%;
     transform: translateY(2vw);
     background-color: #fff;
@@ -359,6 +359,12 @@ body {
     font-size: 5vw;
   }
 
+  .menu_bar {
+    font-size: 5vw;
+    color: #fff;
+    cursor: pointer;
+  }
+
   /*about*/
   .about {
     width: 100%;
@@ -407,46 +413,6 @@ body {
     left: 0;
     padding: 0 3vw;
     box-sizing: border-box;
-  }
-
-  .about .about_inner .page .menu_bar {
-    font-size: 5vw;
-    color: #fff;
-    cursor: pointer;
-  }
-
-  /*line01*/
-  .about .about_inner .line01 {
-    width: 100%;
-    border-bottom: 1px solid #fff;
-    position: relative;
-    top: 12vw;
-    z-index: 1;
-  }
-
-  /*line01::before,::after*/
-  .about .about_inner .line01::before {
-    content: "";
-    width: 0.5vw;
-    height: 0.5vw;
-    border: 1px solid #2850bd;
-    background-color: #fff;
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-  }
-
-  .about .about_inner .line01::after {
-    content: "";
-    width: 0.5vw;
-    height: 0.5vw;
-    border: 1px solid #2850bd;
-    background-color: #fff;
-    position: absolute;
-    top: 50%;
-    right: 0;
-    transform: translateY(-50%);
   }
 
   /*con*/
@@ -498,8 +464,8 @@ body {
     font-size: 2.5vw;
   }
 
-  /*line03*/
-  .about .about_inner .con .line03 {
+  /*line01*/
+  .about .about_inner .con .line01 {
     display: none;
   }
 
@@ -527,8 +493,8 @@ body {
     border-bottom: 1px solid #fff;
   }
 
-  /*line04*/
-  .about .about_inner .con .line04 {
+  /*line02*/
+  .about .about_inner .con .line02 {
     display: none;
   }
 
@@ -576,38 +542,193 @@ body {
     height: 100%;
   }
 
-  /*line02*/
-  .about .about_inner .line02 {
+  /*project spc*/
+  .project {
     width: 100%;
-    border-bottom: 1px solid #fff;
+    height: 100vh;
+    background-color: #b5c3e3;
+  }
+
+  /*inner*/
+  .project .inner {
+    width: 100%;
+    height: 100%;
     position: relative;
-    bottom: -700px;
-    z-index: 1;
   }
 
-  /*line::before,::after*/
-  .about .about_inner .line02::before {
-    content: "";
-    width: 0.5vw;
-    height: 0.5vw;
-    border: 1px solid #2850bd;
-    background-color: #fff;
+  /*circles*/
+  .project .inner .circles {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .project .inner .left_circle {
+    width: 40vw;
+    height: 40vw;
+    background-color: #2850bd;
+    clip-path: circle(50% at 0 0);
+  }
+
+  .project .inner .right_circle {
+    width: 30vw;
+    height: 30vw;
+    background-color: #fed600;
+    clip-path: circle(50% at 100% 0);
+  }
+
+  .project .inner .page {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
     position: absolute;
-    top: 50%;
+    top: 15px;
     left: 0;
-    transform: translateY(-50%);
+    padding: 0 3vw;
+    box-sizing: border-box;
   }
 
-  .about .about_inner .line02::after {
-    content: "";
-    width: 0.5vw;
-    height: 0.5vw;
-    border: 1px solid #2850bd;
-    background-color: #fff;
+  /*cloneWrap*/
+  .project .inner .cloneWrap {
+    width: 100%;
+    height: 85%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     position: absolute;
     top: 50%;
-    right: 0;
-    transform: translateY(-50%);
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  /*cloneWrap::before,::after 구분선*/
+  /* .project .inner .cloneWrap::after {
+    content: "";
+    width: 80%;
+    height: 1px;
+    position: absolute;
+    left: 50%;
+    top: 56%;
+    transform: translateX(-50%);
+    background-color: #fff;
+  } */
+
+  .project .inner .cloneWrap > div {
+    width: 100%;
+  }
+
+  /*cloneWrap left*/
+  .project .inner .cloneWrap .left .mokup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+
+  .project .inner .cloneWrap .left .mokup .circle {
+    width: 75vw;
+    height: 75vw;
+    background-color: #2850bd;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+  }
+
+  .project .inner .cloneWrap .left .pc {
+    width: 100%;
+  }
+
+  .project .inner .cloneWrap .left .pc img {
+    width: 100%;
+  }
+
+  .project .inner .cloneWrap .left .mo {
+    width: 30%;
+    position: absolute;
+    right: 10px;
+    bottom: 20px;
+  }
+
+  .project .inner .cloneWrap .left .mo img {
+    width: 100%;
+  }
+
+  /*cloneWrap right*/
+  .project .inner .cloneWrap .right {
+    margin-top: 30px;
+    padding: 20px 30px;
+    box-sizing: border-box;
+  }
+
+  .project .inner .cloneWrap .right h3 {
+    font-size: 5vw;
+    margin-bottom: 15px;
+  }
+
+  /*cloneWrap right con*/
+  .project .inner .cloneWrap .right .con {
+    font-size: 3vw;
+  }
+
+  .project .inner .cloneWrap .right .con li {
+    line-height: 1.8;
+    position: relative;
+  }
+
+  /*cloneWrap right con::before,::after*/
+  .project .inner .cloneWrap .right .con li::before {
+    content: "";
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    left: -15px;
+    top: 50%;
+    transform: translateY(-35%);
+  }
+
+  /*cloneWrap right tool*/
+  .project .inner .cloneWrap .right .tool {
+    width: 40vw;
+    height: 6.5vw;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .project .inner .cloneWrap .right .tool li {
+    width: 100%;
+    height: 100%;
+  }
+
+  .project .inner .cloneWrap .right .tool li img {
+    width: 100%;
+    height: 100%;
+  }
+
+  /*cloneWrap right txt*/
+  .project .inner .cloneWrap .right .txt {
+    font-size: 3vw;
+    line-height: 1.3;
+    word-break: keep-all;
+    margin: 30px 0;
+  }
+
+  /*cloneWrap right button*/
+  .project .inner .cloneWrap .right .button {
+    width: 20vw;
+    background-color: #2850bd;
+    font-size: 3vw;
+    text-align: center;
+    color: #fed600;
+    padding: 1.5vw;
   }
 }
 
@@ -661,7 +782,7 @@ body {
 
   /*svg*/
   #Layer_1 {
-    padding-top: 2vw;
+    padding-top: 30px;
     margin: 0 1vw;
     box-sizing: border-box;
   }
@@ -897,6 +1018,12 @@ body {
     font-size: 4vw;
   }
 
+  .menu_bar {
+    font-size: 4vw;
+    color: #fff;
+    cursor: pointer;
+  }
+
   /*about*/
   .about {
     width: 100%;
@@ -947,46 +1074,6 @@ body {
     box-sizing: border-box;
   }
 
-  .about .about_inner .page .menu_bar {
-    font-size: 4vw;
-    color: #fff;
-    cursor: pointer;
-  }
-
-  /*line01*/
-  .about .about_inner .line01 {
-    width: 100%;
-    border-bottom: 1px solid #fff;
-    position: relative;
-    top: 11vw;
-    z-index: 1;
-  }
-
-  /*line01::before,::after*/
-  .about .about_inner .line01::before {
-    content: "";
-    width: 0.5vw;
-    height: 0.5vw;
-    border: 1px solid #2850bd;
-    background-color: #fff;
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-  }
-
-  .about .about_inner .line01::after {
-    content: "";
-    width: 0.5vw;
-    height: 0.5vw;
-    border: 1px solid #2850bd;
-    background-color: #fff;
-    position: absolute;
-    top: 50%;
-    right: 0;
-    transform: translateY(-50%);
-  }
-
   /*con*/
   .about .about_inner .con {
     width: 95%;
@@ -997,7 +1084,7 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -30%);
     padding-top: 1.5vw;
     box-sizing: border-box;
   }
@@ -1029,11 +1116,11 @@ body {
 
   .about .about_inner .con .left .left_down p:nth-child(odd) {
     margin-bottom: 0.5vw;
-    font-size: 1.5vw;
+    font-size: 1.7vw;
   }
 
-  /*line03*/
-  .about .about_inner .con .line03 {
+  /*line01*/
+  .about .about_inner .con .line01 {
     width: 0;
     height: 50vw;
     border-right: 1px solid #fff;
@@ -1042,7 +1129,7 @@ body {
   /*con에 center*/
   .about .about_inner .con .center p:nth-child(odd) {
     margin-bottom: 0.5vw;
-    font-size: 1.5vw;
+    font-size: 1.7vw;
   }
 
   .about .about_inner .con .center p:nth-child(3) {
@@ -1059,8 +1146,8 @@ body {
     border-bottom: 1px solid #fff;
   }
 
-  /*line04*/
-  .about .about_inner .con .line04 {
+  /*line02*/
+  .about .about_inner .con .line02 {
     width: 0;
     height: 50vw;
     border-right: 1px solid #fff;
@@ -1110,38 +1197,191 @@ body {
     height: 100%;
   }
 
-  /*line02*/
-  .about .about_inner .line02 {
+  /*project spc*/
+  .project {
     width: 100%;
-    border-bottom: 1px solid #fff;
+    height: 100vh;
+    background-color: #b5c3e3;
+  }
+
+  /*inner*/
+  .project .inner {
+    width: 100%;
+    height: 100%;
     position: relative;
-    bottom: -55vw;
-    z-index: 1;
   }
 
-  /*line::before,::after*/
-  .about .about_inner .line02::before {
-    content: "";
-    width: 0.5vw;
-    height: 0.5vw;
-    border: 1px solid #2850bd;
-    background-color: #fff;
+  /*circles*/
+  .project .inner .circles {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .project .inner .left_circle {
+    width: 40vw;
+    height: 40vw;
+    background-color: #2850bd;
+    clip-path: circle(50% at 0 0);
+  }
+
+  .project .inner .right_circle {
+    width: 25vw;
+    height: 25vw;
+    background-color: #fed600;
+    clip-path: circle(50% at 100% 0);
+  }
+
+  .project .inner .page {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
     position: absolute;
-    top: 50%;
+    top: 20px;
     left: 0;
-    transform: translateY(-50%);
+    padding: 0 3vw;
+    box-sizing: border-box;
   }
 
-  .about .about_inner .line02::after {
-    content: "";
-    width: 0.5vw;
-    height: 0.5vw;
-    border: 1px solid #2850bd;
-    background-color: #fff;
+  /*cloneWrap*/
+  .project .inner .cloneWrap {
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
     position: absolute;
     top: 50%;
-    right: 0;
-    transform: translateY(-50%);
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  /*cloneWrap::before,::after 구분선*/
+  .project .inner .cloneWrap::after {
+    content: "";
+    width: 1px;
+    height: 70%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+  }
+
+  .project .inner .cloneWrap > div {
+    width: 50%;
+  }
+
+  /*cloneWrap left*/
+  .project .inner .cloneWrap .left .mokup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+
+  .project .inner .cloneWrap .left .mokup .circle {
+    width: 45vw;
+    height: 45vw;
+    background-color: #2850bd;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+  }
+
+  .project .inner .cloneWrap .left .pc {
+    width: 100%;
+  }
+
+  .project .inner .cloneWrap .left .pc img {
+    width: 100%;
+  }
+
+  .project .inner .cloneWrap .left .mo {
+    width: 30%;
+    position: absolute;
+    right: 10px;
+    bottom: 20px;
+  }
+
+  .project .inner .cloneWrap .left .mo img {
+    width: 100%;
+  }
+
+  /*cloneWrap right*/
+  .project .inner .cloneWrap .right {
+    padding: 20px 0 20px 20px;
+    box-sizing: border-box;
+  }
+  .project .inner .cloneWrap .right h3 {
+    font-size: 4vw;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  /*cloneWrap right con*/
+  .project .inner .cloneWrap .right .con {
+    font-size: 2.2vw;
+  }
+
+  .project .inner .cloneWrap .right .con li {
+    line-height: 1.8;
+    position: relative;
+  }
+
+  /*cloneWrap right con::before,::after*/
+  .project .inner .cloneWrap .right .con li::before {
+    content: "";
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    left: -15px;
+    top: 50%;
+    transform: translateY(-35%);
+  }
+
+  /*cloneWrap right tool*/
+  .project .inner .cloneWrap .right .tool {
+    width: 25vw;
+    height: 4.5vw;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .project .inner .cloneWrap .right .tool li {
+    width: 100%;
+    height: 100%;
+  }
+
+  .project .inner .cloneWrap .right .tool li img {
+    width: 100%;
+    height: 100%;
+  }
+
+  /*cloneWrap right txt*/
+  .project .inner .cloneWrap .right .txt {
+    font-size: 1.8vw;
+    line-height: 1.3;
+    word-break: keep-all;
+    margin: 30px 0;
+  }
+
+  /*cloneWrap right button*/
+  .project .inner .cloneWrap .right .button {
+    width: 10vw;
+    background-color: #2850bd;
+    font-size: 1.5vw;
+    text-align: center;
+    color: #fed600;
+    padding: 1vw;
   }
 }
 
@@ -1195,7 +1435,7 @@ body {
 
   /*svg*/
   #Layer_1 {
-    padding-top: 2vw;
+    padding-top: 40px;
     margin: 0 1vw;
     box-sizing: border-box;
   }
@@ -1435,6 +1675,12 @@ body {
     font-size: 3.5vw;
   }
 
+  .menu_bar {
+    font-size: 3vw;
+    color: #fff;
+    cursor: pointer;
+  }
+
   /*about*/
   .about {
     width: 100%;
@@ -1485,46 +1731,6 @@ body {
     box-sizing: border-box;
   }
 
-  .about .about_inner .page .menu_bar {
-    font-size: 3.5vw;
-    color: #fff;
-    cursor: pointer;
-  }
-
-  /*line01*/
-  .about .about_inner .line01 {
-    width: 100%;
-    border-bottom: 1px solid #fff;
-    position: relative;
-    top: 120px;
-    z-index: 1;
-  }
-
-  /*line01::before,::after*/
-  .about .about_inner .line01::before {
-    content: "";
-    width: 0.5vw;
-    height: 0.5vw;
-    border: 1px solid #2850bd;
-    background-color: #fff;
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-  }
-
-  .about .about_inner .line01::after {
-    content: "";
-    width: 0.5vw;
-    height: 0.5vw;
-    border: 1px solid #2850bd;
-    background-color: #fff;
-    position: absolute;
-    top: 50%;
-    right: 0;
-    transform: translateY(-50%);
-  }
-
   /*con*/
   .about .about_inner .con {
     width: 90%;
@@ -1535,7 +1741,7 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -30%);
     padding-top: 1.5vw;
     box-sizing: border-box;
   }
@@ -1567,11 +1773,11 @@ body {
 
   .about .about_inner .con .left .left_down p:nth-child(odd) {
     margin-bottom: 0.5vw;
-    font-size: 1.3vw;
+    font-size: 1.5vw;
   }
 
-  /*line03*/
-  .about .about_inner .con .line03 {
+  /*line01*/
+  .about .about_inner .con .line01 {
     width: 0;
     height: 35vw;
     border-right: 1px solid #fff;
@@ -1580,7 +1786,7 @@ body {
   /*con에 center*/
   .about .about_inner .con .center p:nth-child(odd) {
     margin-bottom: 0.5vw;
-    font-size: 1.3vw;
+    font-size: 1.5vw;
   }
 
   .about .about_inner .con .center p:nth-child(3) {
@@ -1597,8 +1803,8 @@ body {
     border-bottom: 1px solid #fff;
   }
 
-  /*line04*/
-  .about .about_inner .con .line04 {
+  /*line02*/
+  .about .about_inner .con .line02 {
     width: 0;
     height: 35vw;
     border-right: 1px solid #fff;
@@ -1648,38 +1854,191 @@ body {
     height: 100%;
   }
 
-  /*line02*/
-  .about .about_inner .line02 {
+  /*project spc*/
+  .project {
     width: 100%;
-    border-bottom: 1px solid #fff;
+    height: 100vh;
+    background-color: #b5c3e3;
+  }
+
+  /*inner*/
+  .project .inner {
+    width: 100%;
+    height: 100%;
     position: relative;
-    bottom: -300px;
-    z-index: 1;
   }
 
-  /*line::before,::after*/
-  .about .about_inner .line02::before {
-    content: "";
-    width: 0.5vw;
-    height: 0.5vw;
-    border: 1px solid #2850bd;
-    background-color: #fff;
+  /*circles*/
+  .project .inner .circles {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .project .inner .left_circle {
+    width: 35vw;
+    height: 35vw;
+    background-color: #2850bd;
+    clip-path: circle(50% at 0 0);
+  }
+
+  .project .inner .right_circle {
+    width: 20vw;
+    height: 20vw;
+    background-color: #fed600;
+    clip-path: circle(50% at 100% 0);
+  }
+
+  .project .inner .page {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
     position: absolute;
-    top: 50%;
+    top: 15px;
     left: 0;
-    transform: translateY(-50%);
+    padding: 0 3vw;
+    box-sizing: border-box;
   }
 
-  .about .about_inner .line02::after {
-    content: "";
-    width: 0.5vw;
-    height: 0.5vw;
-    border: 1px solid #2850bd;
-    background-color: #fff;
+  /*cloneWrap*/
+  .project .inner .cloneWrap {
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
     position: absolute;
     top: 50%;
-    right: 0;
-    transform: translateY(-50%);
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  /*cloneWrap::before,::after 구분선*/
+  .project .inner .cloneWrap::after {
+    content: "";
+    width: 1px;
+    height: 70%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+  }
+
+  .project .inner .cloneWrap > div {
+    width: 50%;
+  }
+
+  /*cloneWrap left*/
+  .project .inner .cloneWrap .left .mokup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+
+  .project .inner .cloneWrap .left .mokup .circle {
+    width: 40vw;
+    height: 40vw;
+    background-color: #2850bd;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+  }
+
+  .project .inner .cloneWrap .left .pc {
+    width: 100%;
+  }
+
+  .project .inner .cloneWrap .left .pc img {
+    width: 100%;
+  }
+
+  .project .inner .cloneWrap .left .mo {
+    width: 30%;
+    position: absolute;
+    right: 10px;
+    bottom: 30px;
+  }
+
+  .project .inner .cloneWrap .left .mo img {
+    width: 100%;
+  }
+
+  /*cloneWrap right*/
+  .project .inner .cloneWrap .right {
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  .project .inner .cloneWrap .right h3 {
+    font-size: 4vw;
+    margin-bottom: 50px;
+    text-align: center;
+  }
+
+  /*cloneWrap right con*/
+  .project .inner .cloneWrap .right .con {
+    font-size: 2vw;
+  }
+
+  .project .inner .cloneWrap .right .con li {
+    line-height: 1.8;
+    position: relative;
+  }
+
+  /*cloneWrap right con::before,::after*/
+  .project .inner .cloneWrap .right .con li::before {
+    content: "";
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    left: -15px;
+    top: 50%;
+    transform: translateY(-35%);
+  }
+
+  /*cloneWrap right tool*/
+  .project .inner .cloneWrap .right .tool {
+    width: 25vw;
+    height: 4.5vw;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .project .inner .cloneWrap .right .tool li {
+    width: 100%;
+    height: 100%;
+  }
+
+  .project .inner .cloneWrap .right .tool li img {
+    width: 100%;
+    height: 100%;
+  }
+
+  /*cloneWrap right txt*/
+  .project .inner .cloneWrap .right .txt {
+    font-size: 1.6vw;
+    line-height: 1.3;
+    word-break: keep-all;
+    margin: 30px 0;
+  }
+
+  /*cloneWrap right button*/
+  .project .inner .cloneWrap .right .button {
+    width: 10vw;
+    background-color: #2850bd;
+    font-size: 1.5vw;
+    text-align: center;
+    color: #fed600;
+    padding: 1vw;
   }
 }
 
@@ -1740,7 +2099,7 @@ body {
 
   /*svg*/
   #Layer_1 {
-    padding-top: 2vw;
+    padding-top: 40px;
     margin: 0 1vw;
     box-sizing: border-box;
   }
@@ -1984,7 +2343,7 @@ body {
   }
 
   .menu_bar {
-    font-size: 5vw;
+    font-size: 3vw;
     color: #fff;
     cursor: pointer;
   }
@@ -2033,44 +2392,10 @@ body {
     align-items: center;
     text-align: center;
     position: absolute;
-    top: 5px;
+    top: 20px;
     left: 0;
     padding: 0 3vw;
     box-sizing: border-box;
-  }
-
-  /*line01*/
-  .about .about_inner .line01 {
-    width: 100%;
-    border-bottom: 1px solid #fff;
-    position: relative;
-    top: 150px;
-    z-index: 1;
-  }
-
-  /*line01::before,::after*/
-  .about .about_inner .line01::before {
-    content: "";
-    width: 0.5vw;
-    height: 0.5vw;
-    border: 1px solid #2850bd;
-    background-color: #fff;
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-  }
-
-  .about .about_inner .line01::after {
-    content: "";
-    width: 0.5vw;
-    height: 0.5vw;
-    border: 1px solid #2850bd;
-    background-color: #fff;
-    position: absolute;
-    top: 50%;
-    right: 0;
-    transform: translateY(-50%);
   }
 
   /*con*/
@@ -2118,8 +2443,8 @@ body {
     font-size: 1.2vw;
   }
 
-  /*line03*/
-  .about .about_inner .con .line03 {
+  /*line01*/
+  .about .about_inner .con .line01 {
     width: 0;
     height: 35vw;
     border-right: 1px solid #fff;
@@ -2145,8 +2470,8 @@ body {
     border-bottom: 1px solid #fff;
   }
 
-  /*line04*/
-  .about .about_inner .con .line04 {
+  /*line02*/
+  .about .about_inner .con .line02 {
     width: 0;
     height: 35vw;
     border-right: 1px solid #fff;
@@ -2196,163 +2521,190 @@ body {
     height: 100%;
   }
 
-  /*line02*/
-  .about .about_inner .line02 {
-    width: 100%;
-    border-bottom: 1px solid #fff;
-    position: relative;
-    bottom: -250px;
-    z-index: 1;
-  }
-
-  /*line::before,::after*/
-  .about .about_inner .line02::before {
-    content: "";
-    width: 0.5vw;
-    height: 0.5vw;
-    border: 1px solid #2850bd;
-    background-color: #fff;
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-  }
-
-  .about .about_inner .line02::after {
-    content: "";
-    width: 0.5vw;
-    height: 0.5vw;
-    border: 1px solid #2850bd;
-    background-color: #fff;
-    position: absolute;
-    top: 50%;
-    right: 0;
-    transform: translateY(-50%);
-  }
-
-  /*project01*/
-  .project01 {
+  /*project spc*/
+  .project {
     width: 100%;
     height: 100vh;
     background-color: #b5c3e3;
-    border: 1px solid #000;
   }
 
   /*inner*/
-  .project01 .inner {
+  .project .inner {
     width: 100%;
     height: 100%;
     position: relative;
   }
 
   /*circles*/
-  .project01 .inner .circles {
+  .project .inner .circles {
     width: 100%;
     display: flex;
     justify-content: space-between;
   }
-  .project01 .inner .left_circle {
+
+  .project .inner .left_circle {
     width: 35vw;
     height: 35vw;
     background-color: #2850bd;
     clip-path: circle(50% at 0 0);
   }
 
-  .project01 .inner .right_circle {
-    width: 25vw;
-    height: 25vw;
+  .project .inner .right_circle {
+    width: 20vw;
+    height: 20vw;
     background-color: #fed600;
     clip-path: circle(50% at 100% 0);
   }
 
-  .project01 .inner .page {
+  .project .inner .page {
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     text-align: center;
     position: absolute;
-    top: 5px;
+    top: 20px;
     left: 0;
     padding: 0 3vw;
     box-sizing: border-box;
   }
 
   /*cloneWrap*/
-  .project01 .inner .cloneWrap {
+  .project .inner .cloneWrap {
     width: 95%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 
-  .project01 .inner .cloneWrap > div {
+  /*cloneWrap::before,::after 구분선*/
+  .project .inner .cloneWrap::after {
+    content: "";
+    width: 1px;
+    height: 70%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+  }
+
+  .project .inner .cloneWrap > div {
     width: 50%;
   }
 
   /*cloneWrap left*/
-  .project01 .inner .cloneWrap .left .mokup {
-    /* width: 100%; */
+  .project .inner .cloneWrap .left .mokup {
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
-    border: 1px solid #000;
   }
 
-  .project01 .inner .cloneWrap .left .pc {
-    width: 80%;
+  .project .inner .cloneWrap .left .mokup .circle {
+    width: 35vw;
+    height: 35vw;
+    background-color: #2850bd;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
   }
 
-  .project01 .inner .cloneWrap .left .pc img {
+  .project .inner .cloneWrap .left .pc {
     width: 100%;
   }
 
-  .project01 .inner .cloneWrap .left .mo {
-    width: 20%;
+  .project .inner .cloneWrap .left .pc img {
+    width: 100%;
+  }
+
+  .project .inner .cloneWrap .left .mo {
+    width: 30%;
     position: absolute;
-    right: 70px;
+    right: 10px;
     bottom: 50px;
   }
 
-  .project01 .inner .cloneWrap .left .mo img {
+  .project .inner .cloneWrap .left .mo img {
     width: 100%;
   }
 
   /*cloneWrap right*/
-  .project01 .inner .cloneWrap .right {
-    border: 1px solid red;
+  .project .inner .cloneWrap .right {
+    padding: 20px;
+    box-sizing: border-box;
   }
-  .project01 .inner .cloneWrap .right h3 {
+  .project .inner .cloneWrap .right h3 {
     font-size: 3vw;
     margin-bottom: 50px;
+    text-align: center;
   }
 
   /*cloneWrap right con*/
-  .project01 .inner .cloneWrap .right .con {
+  .project .inner .cloneWrap .right .con {
     font-size: 1.5vw;
   }
 
-  .project01 .inner .cloneWrap .right .con li {
-    margin-bottom: 15px;
+  .project .inner .cloneWrap .right .con li {
+    line-height: 3vw;
+    position: relative;
+  }
+
+  /*cloneWrap right con::before,::after*/
+  .project .inner .cloneWrap .right .con li::before {
+    content: "";
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    left: -15px;
+    top: 50%;
+    transform: translateY(-35%);
   }
 
   /*cloneWrap right tool*/
-  .project01 .inner .cloneWrap .right .tool {
-    width: 300px;
-    height: 75px;
+  .project .inner .cloneWrap .right .tool {
+    width: 15vw;
+    height: 2.5vw;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 20px;
   }
 
-  .project01 .inner .cloneWrap .right .tool li {
+  .project .inner .cloneWrap .right .tool li {
     width: 100%;
     height: 100%;
-    border: 1px solid blue;
   }
 
-  .project01 .inner .cloneWrap .right .tool li img {
+  .project .inner .cloneWrap .right .tool li img {
     width: 100%;
     height: 100%;
+  }
+
+  /*cloneWrap right txt*/
+  .project .inner .cloneWrap .right .txt {
+    font-size: 1.5vw;
+    line-height: 1.3;
+    word-break: keep-all;
+    margin: 30px 0;
+  }
+
+  /*cloneWrap right button*/
+  .project .inner .cloneWrap .right .button {
+    width: 10vw;
+    background-color: #2850bd;
+    font-size: 1.5vw;
+    text-align: center;
+    color: #fed600;
+    padding: 1vw;
   }
 }
