@@ -109,8 +109,8 @@ $(function () {
 
       gsap.fromTo(
         ".intro .intro_inner .right .textBox",
-        { x: 2000, y: -200 },
-        { x: 0, y: -200, duration: 1 }
+        { x: 2000 },
+        { x: 0, y: -100, duration: 1 }
       );
 
       let t1 = gsap.timeline();
@@ -206,7 +206,7 @@ $(function () {
       gsap.fromTo(
         ".intro .intro_inner .right .textBox",
         { x: 2000 },
-        { x: 0, y: -150, duration: 1 }
+        { x: 0, y: -120, duration: 1 }
       );
 
       let t1 = gsap.timeline();
