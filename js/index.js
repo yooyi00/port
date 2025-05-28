@@ -2,6 +2,19 @@ $(function () {
   Splitting();
   gsap.registerPlugin(ScrollTrigger);
 
+  /*project*/
+  gsap.utils.toArray(".project").forEach((project) => {
+    gsap.timeline({
+      scrollTrigger: {
+        trigger: project,
+        start: "top top",
+        pin: true,
+        pinSpacing: false,
+        //markers: true,
+      },
+    });
+  });
+
   ScrollTrigger.matchMedia({
     "(min-width:1220px)": function () {
       /*intro*/
@@ -88,17 +101,29 @@ $(function () {
           { y: 0, duration: 10 }
         );
 
-      gsap.utils.toArray(".project").forEach((project) => {
-        gsap.timeline({
+      /*project*/
+      gsap
+        .timeline({
           scrollTrigger: {
-            trigger: project,
-            start: "top top",
-            pin: true,
-            pinSpacing: false,
+            trigger: ".project.spc",
+            start: "top 50%",
+            end: "50% 50%",
+            scrub: 2,
             markers: true,
           },
-        });
-      });
+        })
+        .fromTo(
+          ".project .inner .page .Title",
+          { x: -500 },
+          { x: 0, duration: 5 },
+          0
+        )
+        .fromTo(
+          ".project .inner .page .menu_bar",
+          { x: 500 },
+          { x: 0, duration: 5 },
+          0
+        );
     },
 
     "(max-width:1219px)": function () {
