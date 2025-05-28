@@ -28,6 +28,16 @@ $(function () {
     $(".project.seoul .view").css({ display: "none" });
   });
 
+  /*design li클릭 시 이미지 재배치*/
+  $(".design .inner .imgWrap").on("click", function () {
+    $(this).addClass("on");
+  });
+
+  /*design hover 시 뜨는 목업 바로가기 클릭 시 모달창*/
+  $(".design .inner .imgWrap .ds01 .ds_txt .button").on("click", function () {
+    $(".design .inner .view .popup").css({ display: "flex" });
+  });
+
   /*gsap 반응형*/
   ScrollTrigger.matchMedia({
     /*pc*/
