@@ -2,6 +2,7 @@ $(function () {
   Splitting();
   gsap.registerPlugin(ScrollTrigger);
 
+  /*gsap 공통*/
   /*project*/
   gsap.utils.toArray(".project").forEach((project) => {
     gsap.timeline({
@@ -15,7 +16,21 @@ $(function () {
     });
   });
 
+  /*기획서 바로가기 클릭 시 모달창 구현*/
+  $(".project .inner .cloneWrap .right .buttons li:last-child").on(
+    "click",
+    function () {
+      $(".project.seoul .view").css({ display: "block" });
+    }
+  );
+
+  $(".project.seoul .view .close").on("click", function () {
+    $(".project.seoul .view").css({ display: "none" });
+  });
+
+  /*gsap 반응형*/
   ScrollTrigger.matchMedia({
+    /*pc*/
     "(min-width:1220px)": function () {
       /*intro*/
       gsap.fromTo(
@@ -109,23 +124,42 @@ $(function () {
             start: "top 50%",
             end: "50% 50%",
             scrub: 2,
-            markers: true,
+            //markers: true,
           },
         })
         .fromTo(
-          ".project .inner .page .Title",
+          ".project.spc .inner .page .Title",
           { x: -500 },
           { x: 0, duration: 5 },
           0
         )
         .fromTo(
-          ".project .inner .page .menu_bar",
+          ".project.spc .inner .page .menu_bar",
           { x: 500 },
           { x: 0, duration: 5 },
           0
         );
+
+      /*design*/
+      gsap
+        .timeline({
+          scrollTrigger: {
+            trigger: ".design",
+            start: "30% 50%",
+            end: "70% 70%",
+            scrub: 2,
+            markers: true,
+          },
+        })
+        .fromTo(".design li.ds01", { y: 400 }, { y: 0 }, 1)
+        .fromTo(".design li.ds02", { y: 400 }, { y: 0 }, 1.2)
+        .fromTo(".design li.ds03", { y: 400 }, { y: 0 }, 1.4)
+        .fromTo(".design li.ds04", { y: 400 }, { y: 0 }, 1.6)
+        .fromTo(".design li.ds05", { y: 400 }, { y: 0 }, 1.8)
+        .fromTo(".design li.ds06", { y: 400 }, { y: 0 }, 2);
     },
 
+    /*태블릿*/
     "(max-width:1219px)": function () {
       gsap.fromTo(
         /*intro*/
@@ -210,8 +244,33 @@ $(function () {
           { y: 2000 },
           { y: 0, duration: 10 }
         );
+
+      /*project*/
+      gsap
+        .timeline({
+          scrollTrigger: {
+            trigger: ".project.spc",
+            start: "top 70%",
+            end: "60% 70%",
+            scrub: 2,
+            //markers: true,
+          },
+        })
+        .fromTo(
+          ".project.spc .inner .page .Title",
+          { x: -500 },
+          { x: 0, duration: 10 },
+          0
+        )
+        .fromTo(
+          ".project.spc .inner .page .menu_bar",
+          { x: 500 },
+          { x: 0, duration: 10 },
+          0
+        );
     },
 
+    /*모바일*/
     "(max-width:599px)": function () {
       /*intro*/
       gsap.fromTo(
@@ -295,6 +354,30 @@ $(function () {
           ".about .about_inner .con .right",
           { y: 2000 },
           { y: 0, duration: 10 }
+        );
+
+      /*project*/
+      gsap
+        .timeline({
+          scrollTrigger: {
+            trigger: ".project.spc",
+            start: "top 70%",
+            end: "60% 70%",
+            scrub: 2,
+            //markers: true,
+          },
+        })
+        .fromTo(
+          ".project.spc .inner .page .Title",
+          { x: -500 },
+          { x: 0, duration: 10 },
+          0
+        )
+        .fromTo(
+          ".project.spc .inner .page .menu_bar",
+          { x: 500 },
+          { x: 0, duration: 10 },
+          0
         );
     },
   });
