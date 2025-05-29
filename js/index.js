@@ -33,9 +33,33 @@ $(function () {
     $(this).addClass("on");
   });
 
-  /*design hover 시 뜨는 목업 바로가기 클릭 시 모달창*/
+  /*design hover 시 뜨는 목업 보러가기 클릭 시 모달창*/
   $(".design .inner .imgWrap .ds01 .ds_txt .button").on("click", function () {
     $(".design .inner .view .popup").css({ display: "flex" });
+  });
+
+  $(".design .inner .imgWrap .ds02 .ds_txt .button").on("click", function () {
+    $(".design .inner .view .coupon").css({ display: "flex" });
+  });
+
+  $(".design .inner .imgWrap .ds03 .ds_txt .button").on("click", function () {
+    $(".design .inner .view .spring").css({ display: "flex" });
+  });
+
+  $(".design .inner .imgWrap .ds04 .ds_txt .button").on("click", function () {
+    $(".design .inner .view .bigsale").css({ display: "flex" });
+  });
+
+  $(".design .inner .imgWrap .ds05 .ds_txt .button").on("click", function () {
+    $(".design .inner .view .flea").css({ display: "flex" });
+  });
+
+  $(".design .inner .imgWrap .ds06 .ds_txt .button").on("click", function () {
+    $(".design .inner .view .sale").css({ display: "flex" });
+  });
+
+  $(".design .inner .view .close").on("click", function () {
+    $(".design .inner .view li").css({ display: "none" });
   });
 
   /*gsap 반응형*/
@@ -278,6 +302,24 @@ $(function () {
           { x: 0, duration: 10 },
           0
         );
+
+      /*design*/
+      gsap
+        .timeline({
+          scrollTrigger: {
+            trigger: ".design",
+            start: "30% 50%",
+            end: "70% 70%",
+            scrub: 2,
+            markers: true,
+          },
+        })
+        .fromTo(".design li.ds01", { y: 400 }, { y: 0 }, 1)
+        .fromTo(".design li.ds02", { y: 400 }, { y: 0 }, 1.2)
+        .fromTo(".design li.ds03", { y: 400 }, { y: 0 }, 1.4)
+        .fromTo(".design li.ds04", { y: 400 }, { y: 0 }, 1.6)
+        .fromTo(".design li.ds05", { y: 400 }, { y: 0 }, 1.8)
+        .fromTo(".design li.ds06", { y: 400 }, { y: 0 }, 2);
     },
 
     /*모바일*/
@@ -389,6 +431,24 @@ $(function () {
           { x: 0, duration: 10 },
           0
         );
+
+      /*design*/
+      gsap
+        .timeline({
+          scrollTrigger: {
+            trigger: ".design",
+            start: "30% 50%",
+            end: "70% 70%",
+            scrub: 2,
+            markers: true,
+          },
+        })
+        .fromTo(".design li.ds01", { y: 400 }, { y: 0 }, 1)
+        .fromTo(".design li.ds02", { y: 400 }, { y: 0 }, 1.2)
+        .fromTo(".design li.ds03", { y: 400 }, { y: 0 }, 1.4)
+        .fromTo(".design li.ds04", { y: 400 }, { y: 0 }, 1.6)
+        .fromTo(".design li.ds05", { y: 400 }, { y: 0 }, 1.8)
+        .fromTo(".design li.ds06", { y: 400 }, { y: 0 }, 2);
     },
   });
 });

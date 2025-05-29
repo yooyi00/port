@@ -764,6 +764,180 @@ body {
     top: 0;
     right: 10px;
   }
+
+  /*design*/
+  .design {
+    width: 100%;
+    height: 100vh;
+    margin-top: 100vh;
+    background-color: #2850bd;
+  }
+
+  .design .inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+
+  .design .inner .right_circle {
+    width: 30vw;
+    height: 30vw;
+    background-color: #fed600;
+    clip-path: circle(50% at 100% 0);
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  .design .inner .page {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    position: absolute;
+    top: 15px;
+    left: 0;
+    padding: 0 3vw;
+    box-sizing: border-box;
+  }
+
+  /*imgWrap*/
+
+  /*imgWrap에 on이 붙으면*/
+  .design .inner .imgWrap.on {
+    width: 90%;
+    /* height: 75%; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .design .inner .imgWrap.on li {
+    width: calc(100% / 2 - 10px);
+    height: 45vw;
+    position: static;
+    transform: none !important;
+  }
+
+  /*imgWrap에 on이 붙기 전*/
+  .design .inner .imgWrap li {
+    width: 60vw;
+    height: 60vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    cursor: pointer;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .design .inner .imgWrap li:nth-child(1) {
+    background-image: url(../img/popup_illu.png);
+    transform: translate(-50%, -50%);
+  }
+
+  .design .inner .imgWrap li:nth-child(2) {
+    background-image: url(../img/coupon_illu.png);
+    transform: translate(-50%, -50%) rotate(-12deg);
+  }
+
+  .design .inner .imgWrap li:nth-child(3) {
+    background-image: url(../img/spring_illu.png);
+    transform: translate(-50%, -50%) rotate(18deg);
+  }
+
+  .design .inner .imgWrap li:nth-child(4) {
+    background-image: url(../img/bigsale_illu.png);
+    transform: translate(-50%, -50%) rotate(-18deg);
+  }
+
+  .design .inner .imgWrap li:nth-child(5) {
+    background-image: url(../img/fleamarket_illu.png);
+    transform: translate(-50%, -50%) rotate(3deg);
+  }
+
+  .design .inner .imgWrap li:nth-child(6) {
+    background-image: url(../img/popup_illu.png);
+    transform: translate(-50%, -50%) rotate(-3deg);
+  }
+
+  /*ds_bg*/
+  .design .inner .imgWrap .ds_txt {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+    padding: 4.5vw;
+    box-sizing: border-box;
+    display: none;
+  }
+
+  .design .inner .imgWrap .ds_txt p {
+    font-size: 3vw;
+    margin-bottom: 10px;
+    word-break: keep-all;
+  }
+
+  .design .inner .imgWrap .ds_txt i {
+    font-size: 2vw;
+    transform: rotate(45deg);
+  }
+
+  .design .inner .imgWrap .ds_txt .button {
+    width: 18vw;
+    font-size: 2.5vw;
+    background-color: #2850bd;
+    color: #fed600;
+    text-align: center;
+    padding: 1.2vw;
+  }
+
+  /*hover*/
+  .design .inner .imgWrap.on li:hover .ds_txt {
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+  }
+
+  /*design view*/
+  .design .inner .view li {
+    width: 65vw;
+    height: 65vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    display: none;
+  }
+
+  .design .inner .view li img {
+    width: 85%;
+    height: 85%;
+  }
+
+  .design .inner .view li .close {
+    position: absolute;
+    top: -1vw;
+    right: 1vw;
+    font-size: 4vw;
+    cursor: pointer;
+  }
 }
 
 /*태블릿01*/
@@ -1462,6 +1636,180 @@ body {
     position: absolute;
     top: 5px;
     right: 25px;
+  }
+
+  /*design*/
+  .design {
+    width: 100%;
+    height: 100vh;
+    margin-top: 100vh;
+    background-color: #2850bd;
+  }
+
+  .design .inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+
+  .design .inner .right_circle {
+    width: 25vw;
+    height: 25vw;
+    background-color: #fed600;
+    clip-path: circle(50% at 100% 0);
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  .design .inner .page {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    position: absolute;
+    top: 20px;
+    left: 0;
+    padding: 0 3vw;
+    box-sizing: border-box;
+  }
+
+  /*imgWrap*/
+
+  /*imgWrap에 on이 붙으면*/
+  .design .inner .imgWrap.on {
+    width: 90%;
+    /* height: 75%; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .design .inner .imgWrap.on li {
+    width: calc(100% / 2 - 10px);
+    height: 33vw;
+    position: static;
+    transform: none !important;
+  }
+
+  /*imgWrap에 on이 붙기 전*/
+  .design .inner .imgWrap li {
+    width: 350px;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    cursor: pointer;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .design .inner .imgWrap li:nth-child(1) {
+    background-image: url(../img/popup_illu.png);
+    transform: translate(-50%, -50%);
+  }
+
+  .design .inner .imgWrap li:nth-child(2) {
+    background-image: url(../img/coupon_illu.png);
+    transform: translate(-50%, -50%) rotate(-12deg);
+  }
+
+  .design .inner .imgWrap li:nth-child(3) {
+    background-image: url(../img/spring_illu.png);
+    transform: translate(-50%, -50%) rotate(18deg);
+  }
+
+  .design .inner .imgWrap li:nth-child(4) {
+    background-image: url(../img/bigsale_illu.png);
+    transform: translate(-50%, -50%) rotate(-18deg);
+  }
+
+  .design .inner .imgWrap li:nth-child(5) {
+    background-image: url(../img/fleamarket_illu.png);
+    transform: translate(-50%, -50%) rotate(3deg);
+  }
+
+  .design .inner .imgWrap li:nth-child(6) {
+    background-image: url(../img/popup_illu.png);
+    transform: translate(-50%, -50%) rotate(-3deg);
+  }
+
+  /*ds_bg*/
+  .design .inner .imgWrap .ds_txt {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+    padding: 4.5vw;
+    box-sizing: border-box;
+    display: none;
+  }
+
+  .design .inner .imgWrap .ds_txt p {
+    font-size: 3vw;
+    margin-bottom: 10px;
+    word-break: keep-all;
+  }
+
+  .design .inner .imgWrap .ds_txt i {
+    font-size: 2vw;
+    transform: rotate(45deg);
+  }
+
+  .design .inner .imgWrap .ds_txt .button {
+    width: 18vw;
+    font-size: 2.5vw;
+    background-color: #2850bd;
+    color: #fed600;
+    text-align: center;
+    padding: 1.2vw;
+  }
+
+  /*hover*/
+  .design .inner .imgWrap.on li:hover .ds_txt {
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+  }
+
+  /*design view*/
+  .design .inner .view li {
+    width: 65vw;
+    height: 65vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    display: none;
+  }
+
+  .design .inner .view li img {
+    width: 85%;
+    height: 85%;
+  }
+
+  .design .inner .view li .close {
+    position: absolute;
+    top: -5px;
+    right: 12px;
+    font-size: 4vw;
+    cursor: pointer;
   }
 }
 
@@ -2165,6 +2513,180 @@ body {
     position: absolute;
     top: 5px;
     right: 25px;
+  }
+
+  /*design*/
+  .design {
+    width: 100%;
+    height: 100vh;
+    margin-top: 100vh;
+    background-color: #2850bd;
+  }
+
+  .design .inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+
+  .design .inner .right_circle {
+    width: 20vw;
+    height: 20vw;
+    background-color: #fed600;
+    clip-path: circle(50% at 100% 0);
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  .design .inner .page {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    position: absolute;
+    top: 15px;
+    left: 0;
+    padding: 0 3vw;
+    box-sizing: border-box;
+  }
+
+  /*imgWrap*/
+
+  /*imgWrap에 on이 붙으면*/
+  .design .inner .imgWrap.on {
+    width: 90%;
+    /* height: 75%; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .design .inner .imgWrap.on li {
+    width: calc(100% / 3 - 10px);
+    height: 30vw;
+    position: static;
+    transform: none !important;
+  }
+
+  /*imgWrap에 on이 붙기 전*/
+  .design .inner .imgWrap li {
+    width: 450px;
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    cursor: pointer;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .design .inner .imgWrap li:nth-child(1) {
+    background-image: url(../img/popup_illu.png);
+    transform: translate(-50%, -50%);
+  }
+
+  .design .inner .imgWrap li:nth-child(2) {
+    background-image: url(../img/coupon_illu.png);
+    transform: translate(-50%, -50%) rotate(-12deg);
+  }
+
+  .design .inner .imgWrap li:nth-child(3) {
+    background-image: url(../img/spring_illu.png);
+    transform: translate(-50%, -50%) rotate(18deg);
+  }
+
+  .design .inner .imgWrap li:nth-child(4) {
+    background-image: url(../img/bigsale_illu.png);
+    transform: translate(-50%, -50%) rotate(-18deg);
+  }
+
+  .design .inner .imgWrap li:nth-child(5) {
+    background-image: url(../img/fleamarket_illu.png);
+    transform: translate(-50%, -50%) rotate(3deg);
+  }
+
+  .design .inner .imgWrap li:nth-child(6) {
+    background-image: url(../img/popup_illu.png);
+    transform: translate(-50%, -50%) rotate(-3deg);
+  }
+
+  /*ds_bg*/
+  .design .inner .imgWrap .ds_txt {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+    padding: 4.5vw;
+    box-sizing: border-box;
+    display: none;
+  }
+
+  .design .inner .imgWrap .ds_txt p {
+    font-size: 2vw;
+    margin-bottom: 10px;
+    word-break: keep-all;
+  }
+
+  .design .inner .imgWrap .ds_txt i {
+    font-size: 1.2vw;
+    transform: rotate(45deg);
+  }
+
+  .design .inner .imgWrap .ds_txt .button {
+    width: 10vw;
+    font-size: 1.5vw;
+    background-color: #2850bd;
+    color: #fed600;
+    text-align: center;
+    padding: 0.7vw;
+  }
+
+  /*hover*/
+  .design .inner .imgWrap.on li:hover .ds_txt {
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+  }
+
+  /*design view*/
+  .design .inner .view li {
+    width: 45vw;
+    height: 45vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    display: none;
+  }
+
+  .design .inner .view li img {
+    width: 85%;
+    height: 85%;
+  }
+
+  .design .inner .view li .close {
+    position: absolute;
+    top: -5px;
+    right: 12px;
+    font-size: 3vw;
+    cursor: pointer;
   }
 }
 
@@ -2926,8 +3448,8 @@ body {
 
   /*imgWrap에 on이 붙으면*/
   .design .inner .imgWrap.on {
-    width: 80%;
-    height: 75%;
+    width: 75%;
+    /* height: 75%; */
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -2937,18 +3459,20 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    margin-top: 20px;
   }
 
   .design .inner .imgWrap.on li {
     width: calc(100% / 3 - 10px);
+    height: 20vw;
     position: static;
     transform: none !important;
   }
 
   /*imgWrap에 on이 붙기 전*/
   .design .inner .imgWrap li {
-    width: 20vw;
-    height: 20vw;
+    width: 450px;
+    height: 450px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -2956,7 +3480,6 @@ body {
     left: 50%;
     top: 50%;
     cursor: pointer;
-    transition: 0.5s;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -3000,14 +3523,15 @@ body {
     flex-direction: column;
     justify-content: center;
     color: #fff;
-    padding: 0 100px;
+    padding: 4vw;
     box-sizing: border-box;
     display: none;
   }
 
   .design .inner .imgWrap .ds_txt p {
-    font-size: 1.5vw;
+    font-size: 1.6vw;
     margin-bottom: 10px;
+    word-break: keep-all;
   }
 
   .design .inner .imgWrap .ds_txt i {
@@ -3021,7 +3545,7 @@ body {
     background-color: #2850bd;
     color: #fed600;
     text-align: center;
-    padding: 0.5vw;
+    padding: 0.7vw;
   }
 
   /*hover*/
@@ -3032,8 +3556,8 @@ body {
 
   /*design view*/
   .design .inner .view li {
-    width: 30vw;
-    height: 30vw;
+    width: 40vw;
+    height: 40vw;
     display: flex;
     justify-content: center;
     align-items: center;
