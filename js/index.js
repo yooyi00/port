@@ -180,7 +180,7 @@ $(function () {
           scrollTrigger: {
             trigger: ".design",
             start: "30% 50%",
-            end: "70% 70%",
+            end: "60% 60%",
             scrub: 2,
             markers: true,
           },
@@ -309,7 +309,7 @@ $(function () {
           scrollTrigger: {
             trigger: ".design",
             start: "30% 50%",
-            end: "70% 70%",
+            end: "60% 60%",
             scrub: 2,
             markers: true,
           },
@@ -438,7 +438,7 @@ $(function () {
           scrollTrigger: {
             trigger: ".design",
             start: "30% 50%",
-            end: "70% 70%",
+            end: "60% 60%",
             scrub: 2,
             markers: true,
           },
