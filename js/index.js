@@ -62,6 +62,45 @@ $(function () {
     $(".design .inner .view li").css({ display: "none" });
   });
 
+  /*menubar 클릭 시 menu 보이기*/
+  $(".about .about_inner .page .menu_bar").on("click", function () {
+    $(".about .about_inner .menu").css({ display: "block" });
+  });
+
+  $(".project .inner .page .menu_bar").on("click", function () {
+    $(".project .inner .menu").css({ display: "block" });
+  });
+
+  $(".design .inner .page .menu_bar").on("click", function () {
+    $(".design .inner .menu").css({ display: "block" });
+  });
+
+  /*close 클릭 시 menu 숨기기*/
+  $(".about .about_inner .menu .close").on("click", function () {
+    $(".about .about_inner .menu").css({ display: "none" });
+  });
+
+  $(".project .inner .menu .close").on("click", function () {
+    $(".project .inner .menu").css({ display: "none" });
+  });
+
+  $(".design .inner .menu .close").on("click", function () {
+    $(".design .inner .menu").css({ display: "none" });
+  });
+
+  /*menu gnb li 클릭 시 menu 숨기기*/
+  $(".about .about_inner .menu .gnb li").on("click", function () {
+    $(".about .about_inner .menu").css({ display: "none" });
+  });
+
+  $(".project .inner .menu .gnb li").on("click", function () {
+    $(".project .inner .menu").css({ display: "none" });
+  });
+
+  $(".design .inner .menu .gnb li").on("click", function () {
+    $(".design .inner .menu").css({ display: "none" });
+  });
+
   /*gsap 반응형*/
   ScrollTrigger.matchMedia({
     /*pc*/
@@ -148,30 +187,6 @@ $(function () {
           ".about .about_inner .con .right",
           { y: 2000 },
           { y: 0, duration: 10 }
-        );
-
-      /*project*/
-      gsap
-        .timeline({
-          scrollTrigger: {
-            trigger: ".project.spc",
-            start: "top 50%",
-            end: "50% 50%",
-            scrub: 2,
-            //markers: true,
-          },
-        })
-        .fromTo(
-          ".project.spc .inner .page .Title",
-          { x: -500 },
-          { x: 0, duration: 5 },
-          0
-        )
-        .fromTo(
-          ".project.spc .inner .page .menu_bar",
-          { x: 500 },
-          { x: 0, duration: 5 },
-          0
         );
 
       /*design*/
@@ -279,30 +294,6 @@ $(function () {
           { y: 0, duration: 10 }
         );
 
-      /*project*/
-      gsap
-        .timeline({
-          scrollTrigger: {
-            trigger: ".project.spc",
-            start: "top 70%",
-            end: "60% 70%",
-            scrub: 2,
-            //markers: true,
-          },
-        })
-        .fromTo(
-          ".project.spc .inner .page .Title",
-          { x: -500 },
-          { x: 0, duration: 10 },
-          0
-        )
-        .fromTo(
-          ".project.spc .inner .page .menu_bar",
-          { x: 500 },
-          { x: 0, duration: 10 },
-          0
-        );
-
       /*design*/
       gsap
         .timeline({
@@ -406,30 +397,6 @@ $(function () {
           ".about .about_inner .con .right",
           { y: 2000 },
           { y: 0, duration: 10 }
-        );
-
-      /*project*/
-      gsap
-        .timeline({
-          scrollTrigger: {
-            trigger: ".project.spc",
-            start: "top 70%",
-            end: "60% 70%",
-            scrub: 2,
-            //markers: true,
-          },
-        })
-        .fromTo(
-          ".project.spc .inner .page .Title",
-          { x: -500 },
-          { x: 0, duration: 10 },
-          0
-        )
-        .fromTo(
-          ".project.spc .inner .page .menu_bar",
-          { x: 500 },
-          { x: 0, duration: 10 },
-          0
         );
 
       /*design*/
