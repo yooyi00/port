@@ -176,7 +176,7 @@ $(function () {
             start: "top 70%",
             end: "70% 70%",
             scrub: 2,
-            markers: true,
+            //markers: true,
           },
         })
         .fromTo(".contact .inner .con h2", { x: 2000 }, { x: 0 })
@@ -292,6 +292,38 @@ $(function () {
         .fromTo(".design li.ds04", { y: 400 }, { y: -50 }, 1.6)
         .fromTo(".design li.ds05", { y: 400 }, { y: -50 }, 1.8)
         .fromTo(".design li.ds06", { y: 400 }, { y: -50 }, 2);
+
+      /*contact*/
+      gsap
+        .timeline({
+          scrollTrigger: {
+            trigger: ".contact",
+            start: "top 70%",
+            end: "70% 70%",
+            scrub: 2,
+            //markers: true,
+          },
+        })
+        .fromTo(".contact .inner .con h2", { x: 2000 }, { x: 0 })
+        .fromTo(".contact .inner .con .txtBox", { x: -2000 }, { x: 0 })
+        .fromTo(
+          ".contact .inner .con .icons li:first-child",
+          { y: 2000 },
+          { y: 0 },
+          1
+        )
+        .fromTo(
+          ".contact .inner .con .icons li:nth-child(2)",
+          { y: 2000 },
+          { y: 0 },
+          1.2
+        )
+        .fromTo(
+          ".contact .inner .con .icons li:last-child",
+          { y: 2000 },
+          { y: 0 },
+          1.4
+        );
     },
 
     /*모바일*/
@@ -385,6 +417,38 @@ $(function () {
         .fromTo(".design li.ds04", { y: 400 }, { y: -50 }, 1.6)
         .fromTo(".design li.ds05", { y: 400 }, { y: -50 }, 1.8)
         .fromTo(".design li.ds06", { y: 400 }, { y: -50 }, 2);
+
+      /*contact*/
+      gsap
+        .timeline({
+          scrollTrigger: {
+            trigger: ".contact",
+            start: "top 70%",
+            end: "70% 70%",
+            scrub: 2,
+            //markers: true,
+          },
+        })
+        .fromTo(".contact .inner .con h2", { x: 2000 }, { x: 0 })
+        .fromTo(".contact .inner .con .txtBox", { x: -2000 }, { x: 0 })
+        .fromTo(
+          ".contact .inner .con .icons li:first-child",
+          { y: 2000 },
+          { y: 0 },
+          1
+        )
+        .fromTo(
+          ".contact .inner .con .icons li:nth-child(2)",
+          { y: 2000 },
+          { y: 0 },
+          1.2
+        )
+        .fromTo(
+          ".contact .inner .con .icons li:last-child",
+          { y: 2000 },
+          { y: 0 },
+          1.4
+        );
     },
   });
 });
