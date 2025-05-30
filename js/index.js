@@ -4,13 +4,15 @@ $(function () {
 
   /*gsap 공통*/
   /*project*/
-  gsap.utils.toArray(".project").forEach((project) => {
+  gsap.utils.toArray(".project").forEach((project, i) => {
     gsap.timeline({
       scrollTrigger: {
         trigger: project,
         start: "top top",
         pin: true,
         pinSpacing: false,
+        pinSpacing: i === 2,
+        true: false,
         //markers: true,
       },
     });
@@ -62,43 +64,14 @@ $(function () {
     $(".design .inner .view li").css({ display: "none" });
   });
 
-  /*menubar 클릭 시 menu 보이기*/
-  $(".about .about_inner .page .menu_bar").on("click", function () {
-    $(".about .about_inner .menu").css({ display: "block" });
+  /*bar 클릭 시 modal_menu 보이기*/
+  $("header .menu_bar").on("click", function () {
+    $("header .modal").css({ display: "block" });
   });
 
-  $(".project .inner .page .menu_bar").on("click", function () {
-    $(".project .inner .menu").css({ display: "block" });
-  });
-
-  $(".design .inner .page .menu_bar").on("click", function () {
-    $(".design .inner .menu").css({ display: "block" });
-  });
-
-  /*close 클릭 시 menu 숨기기*/
-  $(".about .about_inner .menu .close").on("click", function () {
-    $(".about .about_inner .menu").css({ display: "none" });
-  });
-
-  $(".project .inner .menu .close").on("click", function () {
-    $(".project .inner .menu").css({ display: "none" });
-  });
-
-  $(".design .inner .menu .close").on("click", function () {
-    $(".design .inner .menu").css({ display: "none" });
-  });
-
-  /*menu gnb li 클릭 시 menu 숨기기*/
-  $(".about .about_inner .menu .gnb li").on("click", function () {
-    $(".about .about_inner .menu").css({ display: "none" });
-  });
-
-  $(".project .inner .menu .gnb li").on("click", function () {
-    $(".project .inner .menu").css({ display: "none" });
-  });
-
-  $(".design .inner .menu .gnb li").on("click", function () {
-    $(".design .inner .menu").css({ display: "none" });
+  /*close 클릭 시 modal_menu 숨기기*/
+  $("header .modal .close").on("click", function () {
+    $("header .modal").css({ display: "none" });
   });
 
   /*gsap 반응형*/
@@ -162,18 +135,6 @@ $(function () {
           },
         })
         .fromTo(
-          ".about .about_inner .page .Title",
-          { x: -500 },
-          { x: 0, duration: 10 },
-          0
-        )
-        .fromTo(
-          ".about .about_inner .page .menu_bar",
-          { x: 500 },
-          { x: 0, duration: 10 },
-          0
-        )
-        .fromTo(
           ".about .about_inner .con .left",
           { y: 2000 },
           { y: 0, duration: 10 }
@@ -195,17 +156,49 @@ $(function () {
           scrollTrigger: {
             trigger: ".design",
             start: "30% 50%",
-            end: "60% 60%",
+            end: "50% 60%",
+            scrub: 2,
+            //markers: true,
+          },
+        })
+        .fromTo(".design li.ds01", { y: 400 }, { y: -50 }, 1)
+        .fromTo(".design li.ds02", { y: 400 }, { y: -50 }, 1.2)
+        .fromTo(".design li.ds03", { y: 400 }, { y: -50 }, 1.4)
+        .fromTo(".design li.ds04", { y: 400 }, { y: -50 }, 1.6)
+        .fromTo(".design li.ds05", { y: 400 }, { y: -50 }, 1.8)
+        .fromTo(".design li.ds06", { y: 400 }, { y: -50 }, 2);
+
+      /*contact*/
+      gsap
+        .timeline({
+          scrollTrigger: {
+            trigger: ".contact",
+            start: "top 70%",
+            end: "70% 70%",
             scrub: 2,
             markers: true,
           },
         })
-        .fromTo(".design li.ds01", { y: 400 }, { y: 0 }, 1)
-        .fromTo(".design li.ds02", { y: 400 }, { y: 0 }, 1.2)
-        .fromTo(".design li.ds03", { y: 400 }, { y: 0 }, 1.4)
-        .fromTo(".design li.ds04", { y: 400 }, { y: 0 }, 1.6)
-        .fromTo(".design li.ds05", { y: 400 }, { y: 0 }, 1.8)
-        .fromTo(".design li.ds06", { y: 400 }, { y: 0 }, 2);
+        .fromTo(".contact .inner .con h2", { x: 2000 }, { x: 0 })
+        .fromTo(".contact .inner .con .txtBox", { x: -2000 }, { x: 0 })
+        .fromTo(
+          ".contact .inner .con .icons li:first-child",
+          { y: 2000 },
+          { y: 0 },
+          1
+        )
+        .fromTo(
+          ".contact .inner .con .icons li:nth-child(2)",
+          { y: 2000 },
+          { y: 0 },
+          1.2
+        )
+        .fromTo(
+          ".contact .inner .con .icons li:last-child",
+          { y: 2000 },
+          { y: 0 },
+          1.4
+        );
     },
 
     /*태블릿*/
@@ -267,18 +260,6 @@ $(function () {
           },
         })
         .fromTo(
-          ".about .about_inner .page .Title",
-          { x: -500 },
-          { x: 0, duration: 10 },
-          0
-        )
-        .fromTo(
-          ".about .about_inner .page .menu_bar",
-          { x: 500 },
-          { x: 0, duration: 10 },
-          0
-        )
-        .fromTo(
           ".about .about_inner .con .left",
           { y: 2000 },
           { y: 0, duration: 10 }
@@ -300,17 +281,17 @@ $(function () {
           scrollTrigger: {
             trigger: ".design",
             start: "30% 50%",
-            end: "60% 60%",
+            end: "50% 60%",
             scrub: 2,
-            markers: true,
+            //markers: true,
           },
         })
-        .fromTo(".design li.ds01", { y: 400 }, { y: 0 }, 1)
-        .fromTo(".design li.ds02", { y: 400 }, { y: 0 }, 1.2)
-        .fromTo(".design li.ds03", { y: 400 }, { y: 0 }, 1.4)
-        .fromTo(".design li.ds04", { y: 400 }, { y: 0 }, 1.6)
-        .fromTo(".design li.ds05", { y: 400 }, { y: 0 }, 1.8)
-        .fromTo(".design li.ds06", { y: 400 }, { y: 0 }, 2);
+        .fromTo(".design li.ds01", { y: 400 }, { y: -50 }, 1)
+        .fromTo(".design li.ds02", { y: 400 }, { y: -50 }, 1.2)
+        .fromTo(".design li.ds03", { y: 400 }, { y: -50 }, 1.4)
+        .fromTo(".design li.ds04", { y: 400 }, { y: -50 }, 1.6)
+        .fromTo(".design li.ds05", { y: 400 }, { y: -50 }, 1.8)
+        .fromTo(".design li.ds06", { y: 400 }, { y: -50 }, 2);
     },
 
     /*모바일*/
@@ -372,18 +353,6 @@ $(function () {
           },
         })
         .fromTo(
-          ".about .about_inner .page .Title",
-          { x: -500 },
-          { x: 0, duration: 10 },
-          0
-        )
-        .fromTo(
-          ".about .about_inner .page .menu_bar",
-          { x: 500 },
-          { x: 0, duration: 10 },
-          0
-        )
-        .fromTo(
           ".about .about_inner .con .left",
           { y: 2000 },
           { y: 0, duration: 10 }
@@ -405,17 +374,17 @@ $(function () {
           scrollTrigger: {
             trigger: ".design",
             start: "30% 50%",
-            end: "60% 60%",
+            end: "50% 60%",
             scrub: 2,
-            markers: true,
+            //markers: true,
           },
         })
-        .fromTo(".design li.ds01", { y: 400 }, { y: 0 }, 1)
-        .fromTo(".design li.ds02", { y: 400 }, { y: 0 }, 1.2)
-        .fromTo(".design li.ds03", { y: 400 }, { y: 0 }, 1.4)
-        .fromTo(".design li.ds04", { y: 400 }, { y: 0 }, 1.6)
-        .fromTo(".design li.ds05", { y: 400 }, { y: 0 }, 1.8)
-        .fromTo(".design li.ds06", { y: 400 }, { y: 0 }, 2);
+        .fromTo(".design li.ds01", { y: 400 }, { y: -50 }, 1)
+        .fromTo(".design li.ds02", { y: 400 }, { y: -50 }, 1.2)
+        .fromTo(".design li.ds03", { y: 400 }, { y: -50 }, 1.4)
+        .fromTo(".design li.ds04", { y: 400 }, { y: -50 }, 1.6)
+        .fromTo(".design li.ds05", { y: 400 }, { y: -50 }, 1.8)
+        .fromTo(".design li.ds06", { y: 400 }, { y: -50 }, 2);
     },
   });
 });

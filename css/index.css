@@ -70,8 +70,86 @@ body {
   color: #fed600;
 }
 
+.menu_bar {
+  color: #2850bd;
+  cursor: pointer;
+}
+
 /*모바일*/
 @media (max-width: 599px) {
+  /*header*/
+  header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1;
+  }
+
+  header .menu_bar {
+    position: absolute;
+    top: 20px;
+    right: 0;
+    padding: 0 3vw;
+    box-sizing: border-box;
+    z-index: 1;
+    font-size: 5vw;
+  }
+
+  /*header modal*/
+  header .modal {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+    display: none;
+  }
+
+  /*gnb*/
+  header .modal .gnb {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin: 0px auto;
+    color: #fed600;
+    font-size: 8vw;
+  }
+
+  header .modal .gnb li {
+    cursor: pointer;
+  }
+
+  /*gnb li hover*/
+  header .modal .gnb li:hover {
+    color: #2850bd;
+  }
+
+  /*close*/
+  header .modal .close {
+    color: #fff;
+    font-size: 7.5vw;
+    position: absolute;
+    top: 3vw;
+    right: 3vw;
+    cursor: pointer;
+  }
+
+  /*container*/
+  #container {
+    width: 100%;
+  }
+
+  .Title {
+    font-size: 5vw;
+  }
+
   /*intro*/
   .intro {
     width: 100%;
@@ -350,21 +428,6 @@ body {
     right: -5px;
   }
 
-  /*container*/
-  #container {
-    width: 100%;
-  }
-
-  .Title {
-    font-size: 5vw;
-  }
-
-  .menu_bar {
-    font-size: 5vw;
-    color: #fff;
-    cursor: pointer;
-  }
-
   /*about*/
   .about {
     width: 100%;
@@ -377,49 +440,6 @@ body {
     width: 100%;
     height: 100%;
     position: relative;
-  }
-
-  /*menu*/
-  .about .about_inner .menu {
-    width: 100%;
-    height: 100vh;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    font-size: 6vw;
-    display: none;
-  }
-
-  .about .about_inner .menu .gnb {
-    width: 90%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 20px;
-    align-items: center;
-    margin: 0px auto;
-    color: #fed600;
-  }
-
-  .about .about_inner .menu .gnb li {
-    padding: 10px;
-    box-sizing: border-box;
-    cursor: pointer;
-  }
-
-  .about .about_inner .menu .close {
-    color: #fff;
-    position: absolute;
-    top: 1vw;
-    right: 2.5vw;
-    cursor: pointer;
-  }
-
-  /*gnb hover*/
-  .about .about_inner .menu .gnb li:hover {
-    color: #2850bd;
   }
 
   /*circles*/
@@ -444,13 +464,8 @@ body {
     clip-path: circle(50% at 100% 0);
   }
 
-  /*page*/
-  .about .about_inner .page {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    text-align: center;
+  /*Title*/
+  .about .about_inner .Title {
     position: absolute;
     top: 15px;
     left: 0;
@@ -637,49 +652,6 @@ body {
     color: #fff;
   }
 
-  /*menu*/
-  .project .inner .menu {
-    width: 100%;
-    height: 100vh;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    font-size: 6vw;
-    display: none;
-  }
-
-  .project .inner .menu .gnb {
-    width: 90%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 20px;
-    align-items: center;
-    margin: 0px auto;
-    color: #fed600;
-  }
-
-  .project .inner .menu .gnb li {
-    padding: 10px;
-    box-sizing: border-box;
-    cursor: pointer;
-  }
-
-  .project .inner .menu .close {
-    color: #fff;
-    position: absolute;
-    top: 1vw;
-    right: 2.5vw;
-    cursor: pointer;
-  }
-
-  /*gnb hover*/
-  .project .inner .menu .gnb li:hover {
-    color: #2850bd;
-  }
-
   /*circles*/
   .project .inner .circles {
     width: 100%;
@@ -703,12 +675,7 @@ body {
     border-radius: 50px;
   }
 
-  .project .inner .page {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    text-align: center;
+  .project .inner .Title {
     position: absolute;
     top: 15px;
     left: 0;
@@ -892,7 +859,6 @@ body {
   .design {
     width: 100%;
     height: 100vh;
-    margin-top: 953px;
     background-color: #2850bd;
   }
 
@@ -900,49 +866,6 @@ body {
     width: 100%;
     height: 100%;
     position: relative;
-  }
-
-  /*menu*/
-  .design .inner .menu {
-    width: 100%;
-    height: 100vh;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    font-size: 6vw;
-    display: none;
-  }
-
-  .design .inner .menu .gnb {
-    width: 90%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 20px;
-    align-items: center;
-    margin: 0px auto;
-    color: #fed600;
-  }
-
-  .design .inner .menu .gnb li {
-    padding: 10px;
-    box-sizing: border-box;
-    cursor: pointer;
-  }
-
-  .design .inner .menu .close {
-    color: #fff;
-    position: absolute;
-    top: 1vw;
-    right: 2.5vw;
-    cursor: pointer;
-  }
-
-  /*gnb hover*/
-  .design .inner .menu .gnb li:hover {
-    color: #2850bd;
   }
 
   .design .inner .right_circle {
@@ -955,12 +878,7 @@ body {
     right: 0;
   }
 
-  .design .inner .page {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    text-align: center;
+  .design .inner .Title {
     position: absolute;
     top: 15px;
     left: 0;
@@ -1104,10 +1022,217 @@ body {
     font-size: 4vw;
     cursor: pointer;
   }
+
+  /*draft*/
+  .draft {
+    width: 100%;
+    height: 100vh;
+  }
+
+  /*contact*/
+  .contact {
+    width: 100%;
+    height: 100vh;
+  }
+
+  /*inner*/
+  .contact .inner {
+    width: 100%;
+    height: 100%;
+    background-color: #222;
+    position: relative;
+  }
+
+  /*circle*/
+  .contact .inner .right_circle {
+    width: 20vw;
+    height: 20vw;
+    background-color: #fed600;
+    clip-path: circle(50% at 100% 0);
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  /*Title*/
+  .contact .inner .Title {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    padding: 0 3vw;
+    box-sizing: border-box;
+  }
+
+  /*con*/
+  .contact .inner .con {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #eee;
+  }
+
+  .contact .inner .con h2 {
+    font-size: 8vw;
+    text-align: center;
+    color: #2850bd;
+    background-color: #fff;
+    padding: 3vw;
+    position: relative;
+  }
+
+  /*h2 line01::before,::after*/
+  .contact .inner .con h2 .line01::before {
+    content: "";
+    width: 1vw;
+    height: 1vw;
+    background-color: #fff;
+    border: 1px solid #2850bd;
+    position: absolute;
+    top: -5px;
+    left: -5px;
+  }
+
+  .contact .inner .con h2 .line01::after {
+    content: "";
+    width: 1vw;
+    height: 1vw;
+    background-color: #fff;
+    border: 1px solid #2850bd;
+    position: absolute;
+    top: -5px;
+    right: -5px;
+  }
+
+  /*h2 line02::before,::after*/
+  .contact .inner .con h2 .line02::before {
+    content: "";
+    width: 1vw;
+    height: 1vw;
+    background-color: #fff;
+    border: 1px solid #2850bd;
+    position: absolute;
+    bottom: -5px;
+    left: -5px;
+  }
+
+  .contact .inner .con h2 .line02::after {
+    content: "";
+    width: 1vw;
+    height: 1vw;
+    background-color: #fff;
+    border: 1px solid #2850bd;
+    position: absolute;
+    bottom: -5px;
+    right: -5px;
+  }
+
+  /*txtBox*/
+  .contact .inner .con .txtBox {
+    font-size: 4vw;
+    text-align: center;
+    margin: 80px 0;
+  }
+
+  /*icons*/
+  .contact .inner .con .icons {
+    width: 90%;
+    font-size: 4vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .contact .inner .con .icons li {
+    width: 100%;
+    cursor: pointer;
+  }
 }
 
 /*태블릿01*/
 @media (min-width: 600px) and (max-width: 799px) {
+  /*header*/
+  header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1;
+  }
+
+  header .menu_bar {
+    position: absolute;
+    top: 20px;
+    right: 0;
+    padding: 0 3vw;
+    box-sizing: border-box;
+    z-index: 1;
+    font-size: 4vw;
+  }
+
+  /*header modal*/
+  header .modal {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+    display: none;
+  }
+
+  /*gnb*/
+  header .modal .gnb {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin: 0px auto;
+    color: #fed600;
+    font-size: 6vw;
+  }
+
+  header .modal .gnb li {
+    cursor: pointer;
+  }
+
+  /*gnb li hover*/
+  header .modal .gnb li:hover {
+    color: #2850bd;
+  }
+
+  /*close*/
+  header .modal .close {
+    color: #fff;
+    font-size: 6vw;
+    position: absolute;
+    top: 2vw;
+    right: 2vw;
+    cursor: pointer;
+  }
+
+  /*container*/
+  #container {
+    width: 100%;
+  }
+
+  .Title {
+    font-size: 4vw;
+  }
+
   /*intro*/
   .intro {
     width: 100%;
@@ -1383,21 +1508,6 @@ body {
     right: -5px;
   }
 
-  /*container*/
-  #container {
-    width: 100%;
-  }
-
-  .Title {
-    font-size: 4vw;
-  }
-
-  .menu_bar {
-    font-size: 4vw;
-    color: #fff;
-    cursor: pointer;
-  }
-
   /*about*/
   .about {
     width: 100%;
@@ -1410,47 +1520,6 @@ body {
     width: 100%;
     height: 100%;
     position: relative;
-  }
-
-  /*menu*/
-  .about .about_inner .menu {
-    width: 100%;
-    height: 100vh;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    font-size: 3.5vw;
-    display: none;
-  }
-
-  .about .about_inner .menu .gnb {
-    width: 90%;
-    height: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0px auto;
-    color: #fed600;
-  }
-
-  .about .about_inner .menu .gnb li {
-    padding: 10px;
-    box-sizing: border-box;
-    cursor: pointer;
-  }
-
-  .about .about_inner .menu .close {
-    color: #fff;
-    position: absolute;
-    top: 1vw;
-    right: 2vw;
-    cursor: pointer;
-  }
-
-  /*gnb hover*/
-  .about .about_inner .menu .gnb li:hover {
-    color: #2850bd;
   }
 
   /*circles*/
@@ -1475,13 +1544,8 @@ body {
     clip-path: circle(50% at 100% 0);
   }
 
-  /*page*/
-  .about .about_inner .page {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    text-align: center;
+  /*Title*/
+  .about .about_inner .Title {
     position: absolute;
     top: 20px;
     left: 0;
@@ -1664,47 +1728,6 @@ body {
     color: #fff;
   }
 
-  /*menu*/
-  .project .inner .menu {
-    width: 100%;
-    height: 100vh;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    font-size: 3.5vw;
-    display: none;
-  }
-
-  .project .inner .menu .gnb {
-    width: 90%;
-    height: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0px auto;
-    color: #fed600;
-  }
-
-  .project .inner .menu .gnb li {
-    padding: 10px;
-    box-sizing: border-box;
-    cursor: pointer;
-  }
-
-  .project .inner .menu .close {
-    color: #fff;
-    position: absolute;
-    top: 1vw;
-    right: 2vw;
-    cursor: pointer;
-  }
-
-  /*gnb hover*/
-  .project .inner .menu .gnb li:hover {
-    color: #2850bd;
-  }
-
   /*circles*/
   .project .inner .circles {
     width: 100%;
@@ -1728,12 +1751,7 @@ body {
     border-radius: 50px;
   }
 
-  .project .inner .page {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    text-align: center;
+  .project .inner .Title {
     position: absolute;
     top: 20px;
     left: 0;
@@ -1927,7 +1945,6 @@ body {
   .design {
     width: 100%;
     height: 100vh;
-    margin-top: 953px;
     background-color: #2850bd;
   }
 
@@ -1935,47 +1952,6 @@ body {
     width: 100%;
     height: 100%;
     position: relative;
-  }
-
-  /*menu*/
-  .design .inner .menu {
-    width: 100%;
-    height: 100vh;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    font-size: 3.5vw;
-    display: none;
-  }
-
-  .design .inner .menu .gnb {
-    width: 90%;
-    height: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0px auto;
-    color: #fed600;
-  }
-
-  .design .inner .menu .gnb li {
-    padding: 10px;
-    box-sizing: border-box;
-    cursor: pointer;
-  }
-
-  .design .inner .menu .close {
-    color: #fff;
-    position: absolute;
-    top: 1vw;
-    right: 2vw;
-    cursor: pointer;
-  }
-
-  /*gnb hover*/
-  .design .inner .menu .gnb li:hover {
-    color: #2850bd;
   }
 
   .design .inner .right_circle {
@@ -1988,12 +1964,7 @@ body {
     right: 0;
   }
 
-  .design .inner .page {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    text-align: center;
+  .design .inner .Title {
     position: absolute;
     top: 20px;
     left: 0;
@@ -2137,10 +2108,215 @@ body {
     font-size: 4vw;
     cursor: pointer;
   }
+
+  /*draft*/
+  .draft {
+    width: 100%;
+    height: 100vh;
+  }
+
+  /*contact*/
+  .contact {
+    width: 100%;
+    height: 100vh;
+  }
+
+  /*inner*/
+  .contact .inner {
+    width: 100%;
+    height: 100%;
+    background-color: #222;
+    position: relative;
+  }
+
+  /*circle*/
+  .contact .inner .right_circle {
+    width: 20vw;
+    height: 20vw;
+    background-color: #fed600;
+    clip-path: circle(50% at 100% 0);
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  /*Title*/
+  .contact .inner .Title {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    padding: 0 3vw;
+    box-sizing: border-box;
+  }
+
+  /*con*/
+  .contact .inner .con {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #eee;
+  }
+
+  .contact .inner .con h2 {
+    font-size: 6vw;
+    text-align: center;
+    color: #2850bd;
+    background-color: #fff;
+    padding: 2vw;
+    position: relative;
+  }
+
+  /*h2 line01::before,::after*/
+  .contact .inner .con h2 .line01::before {
+    content: "";
+    width: 0.5vw;
+    height: 0.5vw;
+    background-color: #fff;
+    border: 1px solid #2850bd;
+    position: absolute;
+    top: -5px;
+    left: -5px;
+  }
+
+  .contact .inner .con h2 .line01::after {
+    content: "";
+    width: 0.5vw;
+    height: 0.5vw;
+    background-color: #fff;
+    border: 1px solid #2850bd;
+    position: absolute;
+    top: -5px;
+    right: -5px;
+  }
+
+  /*h2 line02::before,::after*/
+  .contact .inner .con h2 .line02::before {
+    content: "";
+    width: 0.5vw;
+    height: 0.5vw;
+    background-color: #fff;
+    border: 1px solid #2850bd;
+    position: absolute;
+    bottom: -5px;
+    left: -5px;
+  }
+
+  .contact .inner .con h2 .line02::after {
+    content: "";
+    width: 0.5vw;
+    height: 0.5vw;
+    background-color: #fff;
+    border: 1px solid #2850bd;
+    position: absolute;
+    bottom: -5px;
+    right: -5px;
+  }
+
+  /*txtBox*/
+  .contact .inner .con .txtBox {
+    font-size: 3.5vw;
+    text-align: center;
+    margin: 50px 0;
+  }
+
+  /*icons*/
+  .contact .inner .con .icons {
+    width: 85%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    font-size: 2.5vw;
+  }
+
+  .contact .inner .con .icons li {
+    width: 100%;
+    cursor: pointer;
+  }
 }
 
 /*태블릿02*/
 @media (min-width: 800px) and (max-width: 1219px) {
+  /*header*/
+  header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1;
+  }
+
+  header .menu_bar {
+    position: absolute;
+    top: 20px;
+    right: 0;
+    padding: 0 3vw;
+    box-sizing: border-box;
+    z-index: 1;
+    font-size: 3.5vw;
+  }
+
+  /*header modal*/
+  header .modal {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+    display: none;
+  }
+
+  /*gnb*/
+  header .modal .gnb {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin: 0px auto;
+    color: #fed600;
+    font-size: 4.5vw;
+  }
+
+  header .modal .gnb li {
+    cursor: pointer;
+  }
+
+  /*gnb li hover*/
+  header .modal .gnb li:hover {
+    color: #2850bd;
+  }
+
+  /*close*/
+  header .modal .close {
+    color: #fff;
+    font-size: 4vw;
+    position: absolute;
+    top: 2vw;
+    right: 3vw;
+    cursor: pointer;
+  }
+
+  /*container*/
+  #container {
+    width: 100%;
+  }
+
+  .Title {
+    font-size: 3.5vw;
+  }
+
   /*intro*/
   .intro {
     width: 100%;
@@ -2420,21 +2596,6 @@ body {
     right: -5px;
   }
 
-  /*container*/
-  #container {
-    width: 100%;
-  }
-
-  .Title {
-    font-size: 3.5vw;
-  }
-
-  .menu_bar {
-    font-size: 3vw;
-    color: #fff;
-    cursor: pointer;
-  }
-
   /*about*/
   .about {
     width: 100%;
@@ -2447,47 +2608,6 @@ body {
     width: 100%;
     height: 100%;
     position: relative;
-  }
-
-  /*menu*/
-  .about .about_inner .menu {
-    width: 100%;
-    height: 100vh;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    font-size: 3vw;
-    display: none;
-  }
-
-  .about .about_inner .menu .gnb {
-    width: 90%;
-    height: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0px auto;
-    color: #fed600;
-  }
-
-  .about .about_inner .menu .gnb li {
-    padding: 10px;
-    box-sizing: border-box;
-    cursor: pointer;
-  }
-
-  .about .about_inner .menu .close {
-    color: #fff;
-    position: absolute;
-    top: 1vw;
-    right: 2vw;
-    cursor: pointer;
-  }
-
-  /*gnb hover*/
-  .about .about_inner .menu .gnb li:hover {
-    color: #2850bd;
   }
 
   /*circles*/
@@ -2512,13 +2632,8 @@ body {
     clip-path: circle(50% at 100% 0);
   }
 
-  /*page*/
-  .about .about_inner .page {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    text-align: center;
+  /*Title*/
+  .about .about_inner .Title {
     position: absolute;
     top: 15px;
     left: 0;
@@ -2701,47 +2816,6 @@ body {
     color: #fff;
   }
 
-  /*menu*/
-  .project .inner .menu {
-    width: 100%;
-    height: 100vh;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    font-size: 3vw;
-    display: none;
-  }
-
-  .project .inner .menu .gnb {
-    width: 90%;
-    height: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0px auto;
-    color: #fed600;
-  }
-
-  .project .inner .menu .gnb li {
-    padding: 10px;
-    box-sizing: border-box;
-    cursor: pointer;
-  }
-
-  .project .inner .menu .close {
-    color: #fff;
-    position: absolute;
-    top: 1vw;
-    right: 2vw;
-    cursor: pointer;
-  }
-
-  /*gnb hover*/
-  .project .inner .menu .gnb li:hover {
-    color: #2850bd;
-  }
-
   /*circles*/
   .project .inner .circles {
     width: 100%;
@@ -2765,12 +2839,7 @@ body {
     border-radius: 50px;
   }
 
-  .project .inner .page {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    text-align: center;
+  .project .inner .Title {
     position: absolute;
     top: 15px;
     left: 0;
@@ -2964,7 +3033,6 @@ body {
   .design {
     width: 100%;
     height: 100vh;
-    margin-top: 953px;
     background-color: #2850bd;
   }
 
@@ -2972,47 +3040,6 @@ body {
     width: 100%;
     height: 100%;
     position: relative;
-  }
-
-  /*menu*/
-  .design .inner .menu {
-    width: 100%;
-    height: 100vh;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    font-size: 3vw;
-    display: none;
-  }
-
-  .design .inner .menu .gnb {
-    width: 90%;
-    height: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0px auto;
-    color: #fed600;
-  }
-
-  .design .inner .menu .gnb li {
-    padding: 10px;
-    box-sizing: border-box;
-    cursor: pointer;
-  }
-
-  .design .inner .menu .close {
-    color: #fff;
-    position: absolute;
-    top: 1vw;
-    right: 2vw;
-    cursor: pointer;
-  }
-
-  /*gnb hover*/
-  .design .inner .menu .gnb li:hover {
-    color: #2850bd;
   }
 
   .design .inner .right_circle {
@@ -3025,12 +3052,7 @@ body {
     right: 0;
   }
 
-  .design .inner .page {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    text-align: center;
+  .design .inner .Title {
     position: absolute;
     top: 15px;
     left: 0;
@@ -3174,10 +3196,213 @@ body {
     font-size: 3vw;
     cursor: pointer;
   }
+
+  /*draft*/
+  .draft {
+    width: 100%;
+    height: 100vh;
+  }
+
+  /*contact*/
+  .contact {
+    width: 100%;
+    height: 100vh;
+  }
+
+  /*inner*/
+  .contact .inner {
+    width: 100%;
+    height: 100%;
+    background-color: #222;
+    position: relative;
+  }
+
+  /*circle*/
+  .contact .inner .right_circle {
+    width: 20vw;
+    height: 20vw;
+    background-color: #fed600;
+    clip-path: circle(50% at 100% 0);
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  /*Title*/
+  .contact .inner .Title {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    padding: 0 3vw;
+    box-sizing: border-box;
+  }
+
+  /*con*/
+  .contact .inner .con {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #eee;
+  }
+
+  .contact .inner .con h2 {
+    font-size: 5vw;
+    text-align: center;
+    color: #2850bd;
+    background-color: #fff;
+    padding: 2vw;
+    position: relative;
+  }
+
+  /*h2 line01::before,::after*/
+  .contact .inner .con h2 .line01::before {
+    content: "";
+    width: 0.5vw;
+    height: 0.5vw;
+    background-color: #fff;
+    border: 1px solid #2850bd;
+    position: absolute;
+    top: -5px;
+    left: -5px;
+  }
+
+  .contact .inner .con h2 .line01::after {
+    content: "";
+    width: 0.5vw;
+    height: 0.5vw;
+    background-color: #fff;
+    border: 1px solid #2850bd;
+    position: absolute;
+    top: -5px;
+    right: -5px;
+  }
+
+  /*h2 line02::before,::after*/
+  .contact .inner .con h2 .line02::before {
+    content: "";
+    width: 0.5vw;
+    height: 0.5vw;
+    background-color: #fff;
+    border: 1px solid #2850bd;
+    position: absolute;
+    bottom: -5px;
+    left: -5px;
+  }
+
+  .contact .inner .con h2 .line02::after {
+    content: "";
+    width: 0.5vw;
+    height: 0.5vw;
+    background-color: #fff;
+    border: 1px solid #2850bd;
+    position: absolute;
+    bottom: -5px;
+    right: -5px;
+  }
+
+  /*txtBox*/
+  .contact .inner .con .txtBox {
+    font-size: 3vw;
+    text-align: center;
+    margin: 100px 0;
+  }
+
+  /*icons*/
+  .contact .inner .con .icons {
+    width: 75%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    font-size: 2vw;
+  }
+
+  .contact .inner .con .icons li {
+    width: 100%;
+    cursor: pointer;
+  }
 }
 
 /*pc*/
 @media (min-width: 1220px) {
+  /*header*/
+  header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1;
+  }
+
+  header .menu_bar {
+    position: absolute;
+    top: 20px;
+    right: 0;
+    padding: 0 3vw;
+    box-sizing: border-box;
+    z-index: 1;
+    font-size: 3vw;
+  }
+
+  /*header modal*/
+  header .modal {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+    display: none;
+  }
+
+  /*gnb*/
+  header .modal .gnb {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px auto;
+    color: #fed600;
+    font-size: 3.5vw;
+  }
+
+  header .modal .gnb li {
+    cursor: pointer;
+  }
+
+  /*gnb li hover*/
+  header .modal .gnb li:hover {
+    color: #2850bd;
+  }
+
+  /*close*/
+  header .modal .close {
+    color: #fff;
+    font-size: 3.5vw;
+    position: absolute;
+    top: 1.2vw;
+    right: 3vw;
+    cursor: pointer;
+  }
+
+  /*container*/
+  #container {
+    width: 100%;
+  }
+
+  .Title {
+    font-size: 3vw;
+  }
+
   /*intro*/
   .intro {
     width: 100%;
@@ -3467,21 +3692,6 @@ body {
     right: -5px;
   }
 
-  /*container*/
-  #container {
-    width: 100%;
-  }
-
-  .Title {
-    font-size: 3vw;
-  }
-
-  .menu_bar {
-    font-size: 3vw;
-    color: #fff;
-    cursor: pointer;
-  }
-
   /*about*/
   .about {
     width: 100%;
@@ -3494,47 +3704,6 @@ body {
     width: 100%;
     height: 100%;
     position: relative;
-  }
-
-  /*menu*/
-  .about .about_inner .menu {
-    width: 100%;
-    height: 100vh;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    font-size: 3vw;
-    display: none;
-  }
-
-  .about .about_inner .menu .gnb {
-    width: 90%;
-    height: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0px auto;
-    color: #fed600;
-  }
-
-  .about .about_inner .menu .gnb li {
-    padding: 10px;
-    box-sizing: border-box;
-    cursor: pointer;
-  }
-
-  .about .about_inner .menu .close {
-    color: #fff;
-    position: absolute;
-    top: 1vw;
-    right: 2vw;
-    cursor: pointer;
-  }
-
-  /*gnb hover*/
-  .about .about_inner .menu .gnb li:hover {
-    color: #2850bd;
   }
 
   /*circles*/
@@ -3559,13 +3728,8 @@ body {
     clip-path: circle(50% at 100% 0);
   }
 
-  /*page*/
-  .about .about_inner .page {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    text-align: center;
+  /*Title*/
+  .about .about_inner .Title {
     position: absolute;
     top: 20px;
     left: 0;
@@ -3747,47 +3911,6 @@ body {
     color: #fff;
   }
 
-  /*menu*/
-  .project .inner .menu {
-    width: 100%;
-    height: 100vh;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    font-size: 3vw;
-    display: none;
-  }
-
-  .project .inner .menu .gnb {
-    width: 90%;
-    height: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0px auto;
-    color: #fed600;
-  }
-
-  .project .inner .menu .gnb li {
-    padding: 10px;
-    box-sizing: border-box;
-    cursor: pointer;
-  }
-
-  .project .inner .menu .close {
-    color: #fff;
-    position: absolute;
-    top: 1vw;
-    right: 2vw;
-    cursor: pointer;
-  }
-
-  /*gnb hover*/
-  .project .inner .menu .gnb li:hover {
-    color: #2850bd;
-  }
-
   /*circles*/
   .project .inner .circles {
     width: 100%;
@@ -3811,12 +3934,7 @@ body {
     border-radius: 100px;
   }
 
-  .project .inner .page {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    text-align: center;
+  .project .inner .Title {
     position: absolute;
     top: 20px;
     left: 0;
@@ -4015,7 +4133,6 @@ body {
   .design {
     width: 100%;
     height: 100vh;
-    margin-top: 953px;
     background-color: #2850bd;
   }
 
@@ -4023,47 +4140,6 @@ body {
     width: 100%;
     height: 100%;
     position: relative;
-  }
-
-  /*menu*/
-  .design .inner .menu {
-    width: 100%;
-    height: 100vh;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    font-size: 3vw;
-    display: none;
-  }
-
-  .design .inner .menu .gnb {
-    width: 90%;
-    height: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0px auto;
-    color: #fed600;
-  }
-
-  .design .inner .menu .gnb li {
-    padding: 10px;
-    box-sizing: border-box;
-    cursor: pointer;
-  }
-
-  .design .inner .menu .close {
-    color: #fff;
-    position: absolute;
-    top: 1vw;
-    right: 2vw;
-    cursor: pointer;
-  }
-
-  /*gnb hover*/
-  .design .inner .menu .gnb li:hover {
-    color: #2850bd;
   }
 
   /*design circle*/
@@ -4077,13 +4153,8 @@ body {
     right: 0;
   }
 
-  /*design page*/
-  .design .inner .page {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    text-align: center;
+  /*design Title*/
+  .design .inner .Title {
     position: absolute;
     top: 20px;
     left: 0;
@@ -4226,6 +4297,138 @@ body {
     top: 5px;
     right: 12px;
     font-size: 1.5vw;
+    cursor: pointer;
+  }
+
+  /*draft*/
+  .draft {
+    width: 100%;
+    height: 100vh;
+  }
+
+  /*contact*/
+  .contact {
+    width: 100%;
+    height: 100vh;
+  }
+
+  /*inner*/
+  .contact .inner {
+    width: 100%;
+    height: 100%;
+    background-color: #222;
+    position: relative;
+  }
+
+  /*circle*/
+  .contact .inner .right_circle {
+    width: 20vw;
+    height: 20vw;
+    background-color: #fed600;
+    clip-path: circle(50% at 100% 0);
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  /*Title*/
+  .contact .inner .Title {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    padding: 0 3vw;
+    box-sizing: border-box;
+  }
+
+  /*con*/
+  .contact .inner .con {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #eee;
+  }
+
+  .contact .inner .con h2 {
+    font-size: 4vw;
+    text-align: center;
+    color: #2850bd;
+    background-color: #fff;
+    padding: 2vw;
+    position: relative;
+  }
+
+  /*h2 line01::before,::after*/
+  .contact .inner .con h2 .line01::before {
+    content: "";
+    width: 0.5vw;
+    height: 0.5vw;
+    background-color: #fff;
+    border: 1px solid #2850bd;
+    position: absolute;
+    top: -5px;
+    left: -5px;
+  }
+
+  .contact .inner .con h2 .line01::after {
+    content: "";
+    width: 0.5vw;
+    height: 0.5vw;
+    background-color: #fff;
+    border: 1px solid #2850bd;
+    position: absolute;
+    top: -5px;
+    right: -5px;
+  }
+
+  /*h2 line02::before,::after*/
+  .contact .inner .con h2 .line02::before {
+    content: "";
+    width: 0.5vw;
+    height: 0.5vw;
+    background-color: #fff;
+    border: 1px solid #2850bd;
+    position: absolute;
+    bottom: -5px;
+    left: -5px;
+  }
+
+  .contact .inner .con h2 .line02::after {
+    content: "";
+    width: 0.5vw;
+    height: 0.5vw;
+    background-color: #fff;
+    border: 1px solid #2850bd;
+    position: absolute;
+    bottom: -5px;
+    right: -5px;
+  }
+
+  /*txtBox*/
+  .contact .inner .con .txtBox {
+    font-size: 2.5vw;
+    text-align: center;
+    margin: 100px 0;
+  }
+
+  /*icons*/
+  .contact .inner .con .icons {
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    font-size: 1.5vw;
+  }
+
+  .contact .inner .con .icons li {
+    width: 100%;
     cursor: pointer;
   }
 }
